@@ -1,0 +1,425 @@
+{
+  "fonte": "NOVA LP VIAFIBRA (2).docx",
+  "aviso": "Briefing do ANALISTA na ordem original do documento. Os blocos 'print' apontam para as imagens extraídas — abra cada uma para entender o que o analista quer naquele ponto.",
+  "resumo": {
+    "blocos_texto": 95,
+    "titulos": 0,
+    "tabelas": 0,
+    "prints": 6
+  },
+  "conteudo": [
+    {
+      "tipo": "texto",
+      "texto": "LP VIAFIBRA"
+    },
+    {
+      "tipo": "texto",
+      "texto": "LP Atual: https://viafibra.com.br/contrate/"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Nova LP: https://golink.1onestrong.com/?storefront=envato-elements"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Esse HTML> Eu fiz n Claudio*. file:///C:/Users/samsu/Downloads/viafibra-landing-page.html#bene"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Numero WHATSAPP: 19 98863-1670"
+    },
+    {
+      "tipo": "texto",
+      "texto": "_______________________________________ ________________________"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Fe, dentro dessa LP vamos manter a estrutura, fundo brancos com as informações mais diretas e mais intuitivo."
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-01.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Conseguiriamos colocar essas animações nos banners?"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Ref. https://vivo.com.br/para-voce?gclsrc=aw.ds&gad_source=1&gad_campaignid=1712627678&gbraid=0AAAAADSS1s227steFcpShL3e1occhvkRH&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEhkqLTfh6R_-KPDonK2qz2oPNHSNMD_Cst-00xMVYV1951PufFqhAaAgifEALw_wcB",
+      "links": [
+        "https://vivo.com.br/para-voce?gclsrc=aw.ds&gad_source=1&gad_campaignid=1712627678&gbraid=0AAAAADSS1s227steFcpShL3e1occhvkRH&gclid=Cj0KCQjwguLSBhDLARIsAH-yPrEhkqLTfh6R_-KPDonK2qz2oPNHSNMD_Cst-00xMVYV1951PufFqhAaAgifEALw_wcB"
+      ]
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-02.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "EM BAIXO DO BANNER, colocar essa tarja com as empresas que eles tem parceiria, deixar rodando"
+    },
+    {
+      "tipo": "texto",
+      "texto": "VERMELHO 1: Logo ViaFibra"
+    },
+    {
+      "tipo": "texto",
+      "texto": "AZUL: Quem somos | Planos |  Dúvidas Frequentes | Benefícios"
+    },
+    {
+      "tipo": "texto",
+      "texto": "AZUL CLARO: Botão ASSINE AGORA"
+    },
+    {
+      "tipo": "texto",
+      "texto": "VERMELHO 2: Serão 4 Banners"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Banner 1 | Institucional:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto do banner:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título: A internet que a sua casa merece!\nSubtítulo: Fibra óptica de verdade com Wi-Fi 6 de última geração para você trabalhar, jogar e assistir em 4K sem travamentos."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e quero conhecer o melhor plano para a minha casa!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Banner 2 | Plano 300 MEGA :"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto do banner:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título:  Custo-benefício para o seu home office com estabilidade no dia a dia."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo: A conexão perfeita para você trabalhar em Home Office, estudar online e navegar sem preocupações."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Botão:  CONTRATAR 300 MEGA"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 300 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Banner 3 | Plano 600 MEGA :"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto do banner:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título: Jogue online sem lag e assista em 4K sem travar."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo: Potência máxima com Wi-Fi 6 para quem não aceita lentidão."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Botão:  QUERO O MAIS VENDIDO"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 600 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Banner 4 | Plano 700 MEGA :"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto do banner:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título: Ultravelocidade para a família toda navegar junto."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo: Conecte múltiplos dispositivos ao mesmo tempo com sinal forte em cada cômodo."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Botão:  CONTRATAR 700 MEGA"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 700 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Banner 5 | Institucional:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto do banner:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título: A Internet de verdade!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo: Conexão 100% fibra óptica, Wi-Fi 6 e suporte técnico de verdade. Peça pelo WhatsApp e comece a usar ainda esta semana."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e quero conhecer o melhor plano para a minha casa!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "PLANOS"
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-03.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "VERMELHO:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título: Escolha a velocidade certa pra sua casa."
+    },
+    {
+      "tipo": "texto",
+      "texto": "VERDE:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo: Todos os planos incluem Wi-Fi 6, apps digitais grátis, instalação grátis e fidelidade"
+    },
+    {
+      "tipo": "texto",
+      "texto": "de 12 meses."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Quadrado 1:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "CONNECT 300 MEGA |  R$89,90/mês |"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 300 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Quadrado 2:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "POWER 600 MEGA |  R$99,90/mês |"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 600 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Quadrado 3:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "XTREME 700 MEGA |  R$114,90/mês |"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e gostaria de mais informações sobre o plano de internet de 700 MEGA!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "*Quando passar o Mouse por cima, mudar as cores."
+    },
+    {
+      "tipo": "texto",
+      "texto": "BENEFICIOS"
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-04.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Img. https://drive.google.com/file/d/1Ro8OXzNDevihBIrWntTtZP4mUlrL2nTo/view?usp=sharing",
+      "links": [
+        "https://drive.google.com/file/d/1Ro8OXzNDevihBIrWntTtZP4mUlrL2nTo/view?usp=sharing"
+      ]
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título. Pacotes de internet com conexão pra tudo o que você faz."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Quadrados."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Rápida conexão"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Melhor sinal e alta performance em toda a casa."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Full HD"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Assista vídeos e séries favoritos em Full HD sem travar."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Estabilidade"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Jogue online com total desempenho e estabilidade."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Suporte 24hrs"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Conte com nosso suporte técnico 24 horas por dia."
+    },
+    {
+      "tipo": "texto",
+      "texto": "QUEM SOMOS"
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-05.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Imagem. https://drive.google.com/file/d/1mNuXjdgDJ3jbgitlgqfzPU_3VKOrlVYt/view?usp=sharing",
+      "links": [
+        "https://drive.google.com/file/d/1mNuXjdgDJ3jbgitlgqfzPU_3VKOrlVYt/view?usp=sharing"
+      ]
+    },
+    {
+      "tipo": "texto",
+      "texto": "Título. Planos de internet em Vinhedo, Valinhos e Louveira."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Subtítulo. Com a missão de prestar serviços com excelência para proporcionar às pessoas acesso ao mundo por meio das telecomunicações, a ViaFibra surgiu em 2010. Com ampla experiência e forte investimento em expansão, nos tornamos referência em internet de fibra óptica na região."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Botão, Assine agora:"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Mensagem do Whatsapp: Olá, Encontrei vocês pelo site e quero conhecer o melhor plano para a minha casa!"
+    },
+    {
+      "tipo": "texto",
+      "texto": "RODA PÉ"
+    },
+    {
+      "tipo": "print",
+      "arquivo": "doc-analista-imgs/print-06.png"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Para Você"
+    },
+    {
+      "tipo": "texto",
+      "texto": "INTERNET FIBRA ÓPTICA."
+    },
+    {
+      "tipo": "texto",
+      "texto": "WhatsApp. 19 3836-3630"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Olá, equipe Via Fibra! Quero saber mais sobre preços e condições da Internet Fibra Óptica."
+    },
+    {
+      "tipo": "texto",
+      "texto": "SAC."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Link: https://sac.viafibra.com.br/aceite"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Corporativo"
+    },
+    {
+      "tipo": "texto",
+      "texto": "PLANO EMPRESARIAL"
+    },
+    {
+      "tipo": "texto",
+      "texto": "WhatsApp. 19 3836-3630"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Texto."
+    },
+    {
+      "tipo": "texto",
+      "texto": "Olá, equipe Via Fibra! Acessei o site e tenho interesse em contratar um plano empresarial. Poderiam me informar as opções disponíveis e como funciona a contratação?"
+    },
+    {
+      "tipo": "texto",
+      "texto": "BLOG"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Link. https://www.viafibra.com.br/blog/"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Redes Sociais"
+    },
+    {
+      "tipo": "texto",
+      "texto": "INSTAGRAM"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Link. https://www.instagram.com/viafibra.oficial/"
+    },
+    {
+      "tipo": "texto",
+      "texto": "FACEBOOK"
+    },
+    {
+      "tipo": "texto",
+      "texto": "Link. https://www.facebook.com/viafibrainternet/"
+    }
+  ]
+}

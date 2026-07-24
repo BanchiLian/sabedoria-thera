@@ -1,0 +1,357 @@
+{
+  "fonte": "https://www.sonifarma.com.br/",
+  "aviso": "IDENTIDADE e FATOS do cliente para a nova landing. Cores, fontes, LOGO e FAVICON daqui SÃO a identidade a usar — o logo e o favicon foram BAIXADOS para identidade-visual/ e devem ser usados na página (não recrie logo textual nem favicon genérico). Os fatos INSPIRAM copy própria — nunca reproduza textos de marketing verbatim nem baixe as imagens de CONTEÚDO do site.",
+  "meta": {
+    "title": "Sonifarma a Farmácia de Manipulação com os melhores preços em Americana e região",
+    "descricao": "A Sonifarma tem remédios manipulados e cosméticos para todas as idades com menor custo e pagamento facilitado. Manipulados em Americana e Região. Entregamos em ",
+    "og_titulo": "",
+    "og_imagem": ""
+  },
+  "identidade_visual": {
+    "logo_candidatos": [
+      "https://www.sonifarma.com.br/media/logo/stores/1/170x1002.png",
+      "https://www.sonifarma.com.br/media/wysiwyg/anvisa-logopp_1.png"
+    ],
+    "og_imagem": "",
+    "favicons": [
+      "https://www.sonifarma.com.br/media/favicon/stores/1/favinew.png"
+    ],
+    "theme_color": "",
+    "logo_local": "identidade-visual/logo.png",
+    "favicon_local": "identidade-visual/favicon.png",
+    "paleta": {
+      "cores_marca": [
+        "#0088cc",
+        "#e02b27",
+        "#ff5216",
+        "#ff5501",
+        "#68a8e0",
+        "#0cc485",
+        "#eb2771",
+        "#0ae3eb",
+        "#008000",
+        "#dd4b39"
+      ],
+      "neutros": [
+        "#ffffff",
+        "#000000",
+        "#e7e7e7",
+        "#777777",
+        "#222529",
+        "#dddddd"
+      ]
+    },
+    "fontes": {
+      "font_families": [
+        "Shadows Into Light",
+        "Open Sans",
+        "Oswald",
+        "Poppins",
+        "monospace",
+        "Menlo",
+        "porto-icons",
+        "FontAwesome"
+      ],
+      "google_fonts": []
+    }
+  },
+  "produto": {},
+  "precos_detectados": [
+    "R$101,90",
+    "R$102,50",
+    "R$107,50",
+    "R$11,90",
+    "R$112,00",
+    "R$117,50",
+    "R$12,90",
+    "R$129,90",
+    "R$138,68",
+    "R$14,90"
+  ],
+  "topicos_da_pagina": [
+    {
+      "nivel": "h3",
+      "texto": "WHATSAPP"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Frete Grátis e ou Reduzido"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Pagamento Seguro On-line"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Loja 100% Segura"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Produtos em Destaque"
+    },
+    {
+      "nivel": "h2",
+      "texto": "PARA ELAS"
+    },
+    {
+      "nivel": "h2",
+      "texto": "SEUS ALIADOS"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Em Destaque"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Campeões no Acesso"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Últimos Lançamentos"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Mais Votados"
+    },
+    {
+      "nivel": "h2",
+      "texto": "MARCAS QUE CONFIAMOS"
+    },
+    {
+      "nivel": "h3",
+      "texto": "DETALHES DE CONTATO"
+    },
+    {
+      "nivel": "h3",
+      "texto": "CORPORATIVO"
+    },
+    {
+      "nivel": "h3",
+      "texto": "MINHA CONTA"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Seguimos as Determinações da Anvisa"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Aceitamos no Pagamento"
+    },
+    {
+      "nivel": "h3",
+      "texto": "Selo de Loja Segura"
+    }
+  ],
+  "possiveis_beneficios_ou_ficha": [
+    "LOJA: Rua Iacanga, 1016Bairro Vila PantanoAmericana - SP",
+    "TELS.: Manipulação: (19) 99922-4392Farmácia: (19) 3461-8536",
+    "HORÁRIOS/SITE: Seg à Sex das 08:00 às 18:00hs",
+    "Use Cupom na 1ª CompraNOVATO10ganhe 10%OFF"
+  ],
+  "imagens_referencia": [
+    {
+      "url": "https://www.facebook.com/tr?id=439547461965194&ev=PageView&noscript=1",
+      "alt": "",
+      "w": "1",
+      "h": "1"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/logo/stores/1/170x1002.png",
+      "alt": "Sonifarma",
+      "w": "170",
+      "h": "100"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/wysiwyg/smartwave/porto/homepage/04/shop4_header_phone.png",
+      "alt": "",
+      "w": "30",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/belezapp.png",
+      "alt": "BELEZA",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/dailypp.png",
+      "alt": "CUIDADOS DIÁRIOS",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/mabepp.png",
+      "alt": "MAMÃE E BEBÊ",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/manipp.png",
+      "alt": "MANIPULADOS",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/medipp.png",
+      "alt": "MEDICAMENTOS",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/vitapp.png",
+      "alt": "SUPLEMENTAÇÃO",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br//media/catalog/category/canvas_2.png",
+      "alt": "OFERTAS SONIFARMA",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br/static/version1782494330/frontend/Smartwave/porto_child/pt_BR/images/loader-1.gif",
+      "alt": "carregando...",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/weltpixel/owlcarouselslider/images/b/a/banner_para_site_-_doceria_cupcake_4_.png",
+      "alt": "DRINK BLUE",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/weltpixel/owlcarouselslider/images/d/e/desperte-se_1_.png",
+      "alt": "CAPPUCCINO DESPERTE-SE",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/weltpixel/owlcarouselslider/images/b/a/banner_fusion_1.png",
+      "alt": "FUSION",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/e/x/expec_jpeg.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/c/o/cortizen_1.jpg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/c/h/chatgpt_image_15_de_mai._de_2026_12_29_37.png",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/l/a/lactobacillus.jpg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/a/c/acetilcisteina_ems_jpeg.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/c/o/colageno_uc_ii.jpg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/g/e/gemini_generated_image_l8jzb9l8jzb9l8jz.png",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/a/n/ansilessteste_1_.png",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/d/i/dipirona_comprimido_neo_quimica_jpeg.jpg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/w/h/whatsapp_image_2026-05-21_at_16.29.56.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/a/r/articol.png",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/p/i/piill_food.jpg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/w/h/whatsapp_image_2026-05-27_at_09.08.18.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/s/u/supravit-c-kids-laranja_fundo-transparente.png",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/w/h/whatsapp_image_2026-05-26_at_11.58.05_1_.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    },
+    {
+      "url": "https://www.sonifarma.com.br/media/catalog/product/cache/44d332587aee8b553d16c45d77a5eb6b/w/h/whatsapp_image_2026-05-26_at_17.45.31.jpeg",
+      "alt": "",
+      "w": "350",
+      "h": "350"
+    }
+  ],
+  "redes_sociais": {
+    "facebook": "https://www.facebook.com/SonifarmaFarmacia",
+    "instagram": "https://www.instagram.com/sonifarmafarmacia/",
+    "whatsapp": "https://wa.me/1934618536?text=Oi, gostaria de tirar uma dúvida sobre os produtos do site!"
+  },
+  "contato": {
+    "emails": [],
+    "telefones": [
+      "(19) 3461-8536",
+      "(19) 99922-4392",
+      "1782494330",
+      "1784288255",
+      "1934618536"
+    ],
+    "whatsapp": [
+      "wa.me/1934618536?text=Oi,",
+      "wa.me/1934618536?text=pode"
+    ]
+  },
+  "legal": {
+    "politica_privacidade": "https://www.sonifarma.com.br/privacy-policy-cookie-restriction-mode/",
+    "politica_cookies": "https://www.sonifarma.com.br/privacy-policy-cookie-restriction-mode/",
+    "termos_de_uso": "https://www.sonifarma.com.br/termos-gerais-de-uso/"
+  }
+}

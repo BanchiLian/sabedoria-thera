@@ -1,0 +1,348 @@
+{
+  "fonte": "https://agro.foxcreation.net/avida/?storefront=envato-elements",
+  "aviso": "ESTRUTURA do template escolhido, para INSPIRAR uma landing ORIGINAL. Não copie textos nem baixe as imagens do template; recrie com a identidade do CLIENTE (identidade.json). Aqui saem só padrões (ordem de seções, nav, CTAs, paleta, fontes).",
+  "meta": {
+    "title": "Avida – Health & Medical",
+    "descricao": "",
+    "og_titulo": "",
+    "og_imagem": ""
+  },
+  "identidade_visual": {
+    "logo_candidatos": [
+      "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/Logo.webp",
+      "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/Logo-2.webp"
+    ],
+    "favicons": [],
+    "theme_color": "",
+    "paleta": {
+      "cores_marca": [
+        "#337ab7",
+        "#3c763d",
+        "#8a6d3b",
+        "#a94442",
+        "#69727d",
+        "#d9534f",
+        "#31708f",
+        "#5cb85c",
+        "#ffc402",
+        "#fcf8e3"
+      ],
+      "neutros": [
+        "#ffffff",
+        "#000000",
+        "#dddddd",
+        "#777777",
+        "#333333",
+        "#eeeeee"
+      ]
+    },
+    "fontes": {
+      "font_families": [
+        "eicons",
+        "Archivo",
+        "Inter",
+        "star",
+        "jkiticon",
+        "Roboto",
+        "Roboto Slab",
+        "Helvetica Neue"
+      ],
+      "google_fonts": [
+        "https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap&ver=6.5.8",
+        "https://fonts.gstatic.com/"
+      ]
+    }
+  },
+  "design_tokens": {
+    "font_size_h1": [
+      "var( --e-global-typography-8c42beb-font-size )",
+      "65%",
+      "63px"
+    ],
+    "font_size_h2": [
+      "var( --e-global-typography-e03f0d0-font-size )",
+      "65%"
+    ],
+    "font_size_body": [],
+    "parallax_background_fixed": true,
+    "ocorrencias_background_fixed": 3,
+    "border_radius_comuns": [
+      "15px 15px 15px 15px",
+      "0",
+      "50%",
+      "4px",
+      "3px"
+    ],
+    "obs": "Replique a ESCALA dos títulos e os efeitos (ex.: parallax) do template. Se parallax_background_fixed=true, alguma seção usa background-attachment: fixed — normalmente faixas de CTA."
+  },
+  "estrutura": {
+    "n_secoes_tag": 0,
+    "n_blocos_layout": 3,
+    "topicos_da_pagina": [
+      {
+        "nivel": "h1",
+        "texto": "Expert Medical Care and Resources for a Healthier Life"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Dedicated to Providing Quality Care for Every Patient"
+      },
+      {
+        "nivel": "h3",
+        "texto": "We Always Ensure Best Medical Treatment For Your Health"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Personalized Healthcare Solutions for Every Stage of Life"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Pharmacy Services"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Surgical Services"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Cardiology Services"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Dental Services"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Schedule Your Care with Our Certified Experts"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Work Hours"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Your Path to Better Health, One Step at a Time"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Make An appoinment"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Consultation"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Begin Your Treatment"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Your Health, Our Commitment to Excellence"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Certified and Experienced Medical Professionals"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Comprehensive Range of Services Under One Roof"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Commitment to Safety, Quality, and Innovation"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Your Health in the Hands of Trusted Experts"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Take the First Step to Better Health Today"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Patient Experiences That Speak for Themselves"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Your Source for Health Tips and Medical Insights"
+      },
+      {
+        "nivel": "h3",
+        "texto": "10 Tips for Maintaining a Healthy Lifestyle"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Telemedicine: The Future of Convenient Healthcare"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Top Signs You Should See a Doctor Right Away"
+      },
+      {
+        "nivel": "h3",
+        "texto": "Subscribe to Our Newsletter"
+      }
+    ],
+    "navegacao": [
+      "Home",
+      "About Us",
+      "Services",
+      "Service Detail",
+      "Appointment",
+      "Pages",
+      "Our Team",
+      "FAQs",
+      "404 Page",
+      "Blog",
+      "Blog Archive",
+      "Single Post",
+      "Contact Us"
+    ],
+    "ctas_detectados": [
+      "Get Started",
+      "View More Testimonials"
+    ]
+  },
+  "redes_sociais": {},
+  "imagens_referencia": [
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/Logo.webp",
+      "alt": "",
+      "w": "654",
+      "h": "189"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/Logo.webp",
+      "alt": "Logo",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/3900a6dd-5016-4b69-95c1-cd0265d918fc_result-e1728242789821-853x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "960"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T1-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T6-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T7-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T8-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/doctor-hospital-team-medical-nurse-health-medicine-2023-11-27-05-04-46-utc_result-1024x966.webp",
+      "alt": "",
+      "w": "800",
+      "h": "755"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/9f4266ec-c939-4ffb-b26e-aa9ed0494be0_result-768x1024.webp",
+      "alt": "",
+      "w": "768",
+      "h": "1024"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/two-medical-staff-in-white-coats-and-scrubs-with-d-2023-11-27-05-10-31-utc_result-1024x683.webp",
+      "alt": "",
+      "w": "800",
+      "h": "534"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/portrait-of-woman-healthcare-worker-2023-11-27-05-19-03-utc_result_11zon-683x1024.webp",
+      "alt": "",
+      "w": "683",
+      "h": "1024"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/D1-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/D2-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/D3-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/D4-1024x1024.webp",
+      "alt": "",
+      "w": "800",
+      "h": "800"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/were-ready-if-you-are-portrait-of-doctors-enjoyin-2023-11-27-05-18-24-utc_result-1024x804.webp",
+      "alt": "",
+      "w": "800",
+      "h": "628"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T6-300x300.webp",
+      "alt": "John Doe",
+      "w": "300",
+      "h": "300"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T7-300x300.webp",
+      "alt": "Goe Bloggs",
+      "w": "300",
+      "h": "300"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/T1-300x300.webp",
+      "alt": "Jane Adams",
+      "w": "300",
+      "h": "300"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/doctor-hospital-team-medical-nurse-health-medicine-2023-11-27-05-04-46-utc_result-1024x966.webp",
+      "alt": "",
+      "w": "800",
+      "h": "755"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/were-ready-if-you-are-portrait-of-doctors-enjoyin-2023-11-27-05-18-24-utc_result-1024x804.webp",
+      "alt": "",
+      "w": "800",
+      "h": "628"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/two-medical-staff-in-white-coats-and-scrubs-with-d-2023-11-27-05-10-31-utc_result-1024x683.webp",
+      "alt": "",
+      "w": "800",
+      "h": "534"
+    },
+    {
+      "url": "https://agro.foxcreation.net/avida/wp-content/uploads/sites/15/2024/10/Logo-2.webp",
+      "alt": "",
+      "w": "654",
+      "h": "189"
+    }
+  ]
+}

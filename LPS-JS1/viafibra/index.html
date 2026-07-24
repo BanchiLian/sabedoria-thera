@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="Planos ViaFibra com fibra óptica e Wi-Fi 6 em Vinhedo, Valinhos e Louveira."
+        />
+        <title>ViaFibra | Internet fibra óptica</title>
+        <link rel="icon" href="identidade-visual/favicon.png" type="image/png" />
+        <style>
+            :root {
+                --azul: #0d6efd;
+                --escuro: #104f94;
+                --amarelo: #f7d909;
+                --ciano: #0dcaf0;
+                --texto: #172033;
+                --cinza: #617087;
+                --claro: #f5f8fc;
+                --borda: #dce5f0;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                margin: 0;
+                font:
+                    16px/1.55 Arial,
+                    sans-serif;
+                color: var(--texto);
+                overflow-x: hidden;
+            }
+            body.trava {
+                overflow: hidden;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            a {
+                color: inherit;
+            }
+            button,
+            input,
+            select {
+                font: inherit;
+            }
+            .container {
+                width: min(1180px, calc(100% - 40px));
+                margin: auto;
+            }
+            h1,
+            h2,
+            h3,
+            p {
+                margin-top: 0;
+            }
+            h1 {
+                font-size: clamp(2rem, 5vw, 2.5rem);
+                line-height: 1.08;
+            }
+            h2 {
+                font-size: clamp(1.7rem, 4vw, 2rem);
+                line-height: 1.15;
+            }
+            .section {
+                padding: 84px 0;
+            }
+            .lead {
+                font-size: 1.08rem;
+                color: var(--cinza);
+            }
+            .tagline {
+                display: inline-block;
+                color: var(--azul);
+                font-size: 0.76rem;
+                font-weight: 900;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+            }
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 48px;
+                padding: 11px 23px;
+                border: 2px solid transparent;
+                border-radius: 99px;
+                background: var(--amarelo);
+                color: #172033;
+                font-weight: 900;
+                text-decoration: none;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            .btn:hover {
+                transform: translateY(-2px);
+            }
+            :focus-visible {
+                outline: 3px solid var(--ciano);
+                outline-offset: 3px;
+            }
+            .header {
+                position: sticky;
+                top: 0;
+                z-index: 20;
+                background: #fff;
+                border-bottom: 1px solid var(--borda);
+            }
+            .nav {
+                position: relative;
+                height: 76px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 25px;
+            }
+            .logo {
+                width: 146px;
+            }
+            .links {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+            .nav-center {
+                position: absolute;
+                left: 50%;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                transform: translateX(-50%);
+            }
+            .links a {
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 800;
+            }
+            .hero {
+                background: var(--escuro);
+                color: #fff;
+            }
+            .slides {
+                position: relative;
+                min-height: 600px;
+            }
+            .slide {
+                --cta-bottom: 18%;
+                position: absolute;
+                inset: 0;
+                display: grid;
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.6s;
+                background-size: cover;
+                background-position: center;
+            }
+            .slide.ativa {
+                opacity: 1;
+                visibility: visible;
+            }
+            .slide:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: transparent;
+            }
+            .slide:nth-child(1) {
+                --cta-bottom: 14%;
+                background-image: url("assets-analista/Banner Institucional.jpg");
+            }
+            .slide:nth-child(2) {
+                background-image: url("assets-analista/Banner Connect.jpg");
+            }
+            .slide:nth-child(3) {
+                --cta-bottom: 8%;
+                background-image: url("assets-analista/Banner Power.jpg");
+            }
+            .slide:nth-child(4) {
+                --cta-bottom: 14%;
+                background-image: url("assets-analista/Banner Xtreme.jpg");
+            }
+            .hero-copy {
+                position: absolute;
+                left: 18.5vw;
+                bottom: var(--cta-bottom);
+                width: auto;
+                z-index: 1;
+                padding: 0;
+                margin: 0;
+                background: transparent;
+                border: 0;
+                backdrop-filter: none;
+            }
+            .hero-copy > :not(.btn) {
+                display: none;
+            }
+            .hero .lead {
+                color: #fff;
+            }
+            .hero .tagline {
+                color: var(--amarelo);
+            }
+            .seta {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                width: 44px;
+                height: 44px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                background: #104f94cc;
+                color: #fff;
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+            .anterior {
+                left: 18px;
+            }
+            .proxima {
+                right: 18px;
+            }
+            .dots {
+                position: absolute;
+                z-index: 3;
+                bottom: 30px;
+                left: 50%;
+                display: flex;
+                gap: 8px;
+                transform: translateX(-50%);
+            }
+            .dot {
+                width: 11px;
+                height: 11px;
+                padding: 0;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                background: transparent;
+            }
+            .dot.ativa {
+                width: 30px;
+                background: var(--amarelo);
+                border-color: var(--amarelo);
+            }
+            .partners {
+                padding: 18px 0;
+                background: var(--azul);
+                color: #fff;
+                overflow: hidden;
+            }
+            .track {
+                display: flex;
+                gap: 48px;
+                width: max-content;
+                animation: rolar 22s linear infinite;
+            }
+            .grupo {
+                display: flex;
+                align-items: center;
+                gap: 48px;
+            }
+            .grupo span {
+                white-space: nowrap;
+                font-weight: 900;
+                opacity: 0.9;
+            }
+            .grupo .apps {
+                font-size: 0.72rem;
+                letter-spacing: 0.16em;
+                color: #d5e8ff;
+                text-transform: uppercase;
+            }
+            @keyframes rolar {
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+            .plans {
+                background: var(--claro);
+            }
+            .cabeca {
+                text-align: center;
+                max-width: 900px;
+                margin: 0 auto 50px;
+            }
+            .plans .cabeca h2 {
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+                align-items: stretch;
+            }
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 390px;
+                padding: 42px 30px;
+                background: #fff;
+                border: 1px solid var(--borda);
+                border-radius: 22px;
+                box-shadow: 0 14px 38px #071b4218;
+                text-align: center;
+                transition: 0.25s;
+                animation: flutuar 4.8s ease-in-out infinite;
+            }
+            .card:nth-child(2) {
+                animation-delay: 0.35s;
+            }
+            .card:nth-child(3) {
+                animation-delay: 0.7s;
+            }
+            @keyframes flutuar {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            .card:hover {
+                color: #fff;
+                background: var(--azul);
+                animation-play-state: paused;
+                transform: translateY(-12px) scale(1.02);
+            }
+            .card:hover .nome {
+                color: #fff;
+            }
+            .card:hover .btn {
+                background: #fff;
+                color: var(--azul);
+            }
+            .card.destaque {
+                border: 2px solid var(--azul);
+            }
+            .selo {
+                position: absolute;
+                right: 17px;
+                top: 17px;
+                padding: 5px 10px;
+                border-radius: 99px;
+                background: var(--amarelo);
+                color: var(--texto);
+                font-size: 0.68rem;
+                font-weight: 900;
+            }
+            .nome {
+                color: var(--azul);
+                font-size: 0.9rem;
+                font-weight: 900;
+                letter-spacing: 0.13em;
+            }
+            .mega {
+                font-size: 1.2rem;
+                line-height: 1;
+                font-weight: 900;
+                margin: 25px 0 12px;
+            }
+            .medidor {
+                --progresso: 50;
+                position: relative;
+                width: min(220px, 100%);
+                height: 120px;
+                margin: 4px auto 22px;
+            }
+            .medidor-svg {
+                display: block;
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+            .medidor-trilha,
+            .medidor-progresso {
+                fill: none;
+                stroke-width: 18;
+                stroke-linecap: butt;
+            }
+            .medidor-trilha {
+                stroke: #e7e9ee;
+            }
+            .medidor-progresso {
+                stroke: var(--azul);
+                stroke-dasharray: var(--progresso) 100;
+                stroke-dashoffset: var(--progresso);
+                transition: stroke 0.25s;
+            }
+            .medidor.animar .medidor-progresso {
+                animation: preencher-medidor 1.8s cubic-bezier(0.22, 0.8, 0.3, 1) forwards;
+            }
+            @keyframes preencher-medidor {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+            .medidor-valor {
+                position: absolute;
+                right: 0;
+                bottom: 7px;
+                left: 0;
+                color: var(--texto);
+                font-size: 1.25rem;
+                font-weight: 900;
+                line-height: 1;
+                text-align: center;
+            }
+            .card:hover .medidor-valor {
+                color: #fff;
+            }
+            .card:hover .medidor-progresso {
+                stroke: var(--amarelo);
+                filter: drop-shadow(0 5px 9px #071b4244);
+            }
+            .preco {
+                width: 100%;
+                padding-top: 25px;
+                border-top: 1px solid var(--borda);
+            }
+            .preco strong {
+                font-size: clamp(2.5rem, 5vw, 3.5rem);
+            }
+            .card:hover .preco {
+                color: var(--amarelo);
+            }
+            .card .btn {
+                margin-top: 24px;
+            }
+            .beneficios {
+                background: var(--escuro);
+                color: #fff;
+            }
+            .beneficios .lead {
+                color: #e3efff;
+            }
+            .beneficios .cabeca {
+                text-align: left;
+                margin-left: 0;
+            }
+            .benefit-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                border: 1px solid #ffffff2b;
+                border-radius: 22px;
+                overflow: hidden;
+            }
+            .benefit {
+                padding: 32px;
+                border-right: 1px solid #ffffff2b;
+            }
+            .benefit:last-child {
+                border: 0;
+            }
+            .benefit img {
+                width: 58px;
+                height: 58px;
+                object-fit: contain;
+            }
+            .benefit p {
+                color: #e3efff;
+            }
+            .about {
+                display: grid;
+                grid-template-columns: 0.9fr 1.1fr;
+                gap: 65px;
+                align-items: center;
+            }
+            .about img {
+                display: block;
+                width: 100%;
+                height: 510px;
+                object-fit: cover;
+                object-position: 35% center;
+                border-radius: 30px;
+                box-shadow: 0 18px 45px #071b4224;
+            }
+            .stats {
+                display: grid;
+                grid-template-columns: 1fr 1.25fr;
+                gap: 18px;
+                margin: 30px 0;
+            }
+            .stat {
+                padding: 20px;
+                border: 1px solid var(--borda);
+                border-radius: 16px;
+                background: #fff;
+                box-shadow: 0 8px 25px #071b420d;
+            }
+            .stats strong {
+                display: block;
+                color: var(--azul);
+                font-size: 1.8rem;
+                line-height: 1.05;
+                white-space: nowrap;
+            }
+            .stats strong b {
+                font: inherit;
+            }
+            .stats span {
+                display: block;
+                margin-top: 8px;
+                font-size: 0.72rem;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            .stats em {
+                display: block;
+                margin-top: 5px;
+                color: var(--cinza);
+                font-size: 0.72rem;
+                font-style: normal;
+            }
+            .footer {
+                padding: 55px 0 22px;
+                background: var(--azul);
+                color: #fff;
+            }
+            .foot-grid {
+                display: grid;
+                grid-template-columns: 1.2fr repeat(3, 1fr);
+                gap: 40px;
+            }
+            .foot-logo {
+                width: 145px;
+                filter: brightness(0) invert(1);
+            }
+            .footer h3 {
+                font-size: 0.82rem;
+                text-transform: uppercase;
+            }
+            .footer a {
+                display: block;
+                text-decoration: none;
+                margin: 8px 0;
+            }
+            .copy {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                flex-wrap: wrap;
+                margin-top: 35px;
+                padding-top: 21px;
+                border-top: 1px solid #ffffff55;
+                font-size: 0.78rem;
+            }
+            .copy a {
+                display: inline;
+                text-decoration: underline;
+            }
+            .modal {
+                position: fixed;
+                inset: 0;
+                z-index: 50;
+                display: none;
+                place-items: center;
+                padding: 20px;
+                background: #03102dcc;
+            }
+            .modal.aberto {
+                display: grid;
+            }
+            .dialog {
+                position: relative;
+                width: min(620px, 100%);
+                max-height: calc(100vh - 40px);
+                overflow: auto;
+                padding: 30px;
+                background: #fff;
+                border-radius: 24px;
+            }
+            .fechar {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                border: 0;
+                background: none;
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+            .fields {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 13px;
+            }
+            .field {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+            .field.full {
+                grid-column: 1/-1;
+            }
+            .field label {
+                font-size: 0.82rem;
+                font-weight: 800;
+            }
+            .field input,
+            .field select {
+                padding: 11px;
+                border: 1px solid #b8c6d8;
+                border-radius: 9px;
+            }
+            .hp {
+                position: absolute;
+                left: -9999px;
+            }
+            .consent {
+                display: flex;
+                gap: 9px;
+                align-items: flex-start;
+                margin: 16px 0;
+                font-size: 0.82rem;
+            }
+            .consent input {
+                margin-top: 4px;
+            }
+            .status {
+                min-height: 22px;
+                color: var(--cinza);
+            }
+            .cookie {
+                position: fixed;
+                z-index: 60;
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                display: none;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                gap: 17px;
+                width: min(900px, calc(100% - 40px));
+                margin: auto;
+                padding: 18px;
+                background: #fff;
+                border: 1px solid var(--borda);
+                border-radius: 16px;
+                box-shadow: 0 20px 70px #0005;
+            }
+            .cookie.show {
+                display: grid;
+            }
+            .cookie p {
+                margin: 0;
+                font-size: 0.86rem;
+            }
+            .cookie-actions {
+                display: flex;
+                gap: 8px;
+            }
+            .recusar {
+                background: #fff;
+                border-color: #7d8998;
+            }
+            @media (max-width: 850px) {
+                .links a {
+                    display: none;
+                }
+                .links .btn {
+                    display: inline-flex;
+                }
+                .cards,
+                .about {
+                    grid-template-columns: 1fr;
+                }
+                .benefit-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .foot-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .hero-copy {
+                    width: 75%;
+                }
+                .section {
+                    padding: 66px 0;
+                }
+            }
+            @media (max-width: 768px) {
+                .slides {
+                    min-height: 71.4286vw;
+                }
+                .slide {
+                    --cta-bottom: 18%;
+                    background-size: 100% 100%;
+                    background-position: center;
+                }
+                .slide:nth-child(1) {
+                    --cta-bottom: 22%;
+                    background-image: url("assets-analista/Banner Institucional - Mobile.jpg");
+                }
+                .slide:nth-child(2) {
+                    --cta-bottom: 20%;
+                    background-image: url("assets-analista/Banner Connect - Mobile.jpg");
+                }
+                .slide:nth-child(3) {
+                    --cta-bottom: 14%;
+                    background-image: url("assets-analista/Banner Power - Mobile.jpg");
+                }
+                .slide:nth-child(4) {
+                    --cta-bottom: 16%;
+                    background-image: url("assets-analista/Banner Xtreme - Mobile.jpg");
+                }
+                .hero-copy {
+                    left: 6%;
+                    bottom: var(--cta-bottom);
+                    width: auto;
+                }
+                .hero-copy .btn {
+                    min-height: clamp(36px, 7vw, 48px);
+                    padding: 7px clamp(12px, 3vw, 23px);
+                    font-size: clamp(0.7rem, 2.5vw, 0.95rem);
+                }
+                .dots {
+                    bottom: 8px;
+                }
+            }
+            @media (max-width: 560px) {
+                .container {
+                    width: min(100% - 28px, 1180px);
+                }
+                .nav {
+                    height: 68px;
+                }
+                .logo {
+                    width: 122px;
+                }
+                .links .btn {
+                    font-size: 0.76rem;
+                    padding: 8px 13px;
+                    min-height: 40px;
+                }
+                .slide {
+                    background-position: center;
+                }
+                .slide:before {
+                    background: transparent;
+                }
+                .hero-copy {
+                    left: 6%;
+                    bottom: var(--cta-bottom);
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+                }
+                .seta {
+                    display: none;
+                }
+                .benefit-grid,
+                .fields,
+                .foot-grid {
+                    grid-template-columns: 1fr;
+                }
+                .benefit {
+                    border-right: 0;
+                    border-bottom: 1px solid #ffffff2b;
+                }
+                .field.full {
+                    grid-column: auto;
+                }
+                .cookie.show {
+                    grid-template-columns: 1fr;
+                }
+                .cookie-actions .btn {
+                    flex: 1;
+                }
+                .section {
+                    padding: 54px 0;
+                }
+                .stats {
+                    grid-template-columns: 1fr;
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .track,
+                .card {
+                    animation: none;
+                }
+                .slide {
+                    transition: none;
+                }
+            }
+        </style>
+        <style>
+            .header {
+                background: var(--azul);
+                border-bottom-color: #ffffff33;
+            }
+            .links a {
+                color: #fff;
+            }
+            .about > img {
+                object-position: left center;
+            }
+            h1,
+            h2,
+            p {
+                overflow-wrap: anywhere;
+            }
+            @media (max-width: 560px) {
+                .nav {
+                    gap: 10px;
+                }
+                .links {
+                    gap: 6px;
+                }
+                .links .btn {
+                    max-width: 132px;
+                    white-space: normal;
+                    line-height: 1.1;
+                }
+                .cookie {
+                    left: 10px;
+                    right: 10px;
+                    width: calc(100% - 20px);
+                }
+                .cookie-actions {
+                    min-width: 0;
+                }
+                .cookie-actions .btn {
+                    min-width: 0;
+                    padding: 9px 12px;
+                    font-size: 0.84rem;
+                }
+                .about > img {
+                    height: 280px;
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container nav">
+                <a href="#inicio"><img class="logo" src="identidade-visual/logo.svg" alt="ViaFibra" /></a>
+                <nav class="links" aria-label="Navegação principal">
+                    <span class="nav-center"
+                        ><a href="#sobre">Quem somos</a><a href="#planos">Planos</a
+                        ><a href="#beneficios">Benefícios</a></span
+                    ><button class="btn abrir" type="button">Assine agora</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero" id="inicio" aria-label="Destaques">
+                <div class="slides">
+                    <article class="slide ativa">
+                        <div class="container">
+                            <div class="hero-copy">
+                                <span class="tagline">Internet para viver melhor</span>
+                                <h1>A internet que a sua casa merece</h1>
+                                <p class="lead">
+                                    Fibra óptica e Wi-Fi 6 para trabalhar, jogar e assistir em alta definição com mais
+                                    tranquilidade.
+                                </p>
+                                <button class="btn abrir">Assine Agora</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slide">
+                        <div class="container">
+                            <div class="hero-copy">
+                                <span class="tagline">Connect 300 Mega</span>
+                                <h2>Equilíbrio para o home office e a rotina conectada</h2>
+                                <p class="lead">Uma conexão estável para trabalhar, estudar e navegar todos os dias.</p>
+                                <button class="btn abrir" data-plano="300 MEGA">Contrate 300 MEGA</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slide">
+                        <div class="container">
+                            <div class="hero-copy">
+                                <span class="tagline">Power 600 Mega</span>
+                                <h2>Jogue online e assista em 4K com muito mais fluidez</h2>
+                                <p class="lead">Potência com Wi-Fi 6 para uma casa que não pode parar.</p>
+                                <button class="btn abrir" data-plano="600 MEGA">O mais vendido 600MEGA</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slide">
+                        <div class="container">
+                            <div class="hero-copy">
+                                <span class="tagline">Xtreme 700 Mega</span>
+                                <h2>Ultravelocidade para todo mundo navegar junto</h2>
+                                <p class="lead">
+                                    Conecte vários dispositivos ao mesmo tempo com desempenho para a família inteira.
+                                </p>
+                                <button class="btn abrir" data-plano="700 MEGA">Contrate 700 MEGA</button>
+                            </div>
+                        </div>
+                    </article>
+                    <button class="seta anterior" aria-label="Banner anterior">‹</button
+                    ><button class="seta proxima" aria-label="Próximo banner">›</button>
+                    <div class="dots"></div>
+                </div>
+            </section>
+            <div class="partners">
+                <div class="track">
+                    <div class="grupo">
+                        <span class="apps">Apps digitais grátis inclusos</span><span>tocalivros</span><span>BITT</span
+                        ><span>TapLingo</span><span>EducaBolso</span><span>SKYFIT</span><span>MISTER WIZ</span>
+                    </div>
+                    <div class="grupo" aria-hidden="true">
+                        <span class="apps">Apps digitais grátis inclusos</span><span>tocalivros</span><span>BITT</span
+                        ><span>TapLingo</span><span>EducaBolso</span><span>SKYFIT</span><span>MISTER WIZ</span>
+                    </div>
+                </div>
+            </div>
+            <section class="section plans" id="planos">
+                <div class="container">
+                    <header class="cabeca">
+                        <h2>Escolha a velocidade certa para a sua casa</h2>
+                        <p class="lead">Planos diretos, com a performance que combina com a sua rotina.</p>
+                    </header>
+                    <div class="cards">
+                        <article class="card">
+                            <div class="nome">PLANO CONNECT</div>
+                            <div class="medidor" style="--progresso: 43" role="img" aria-label="300 Mega, 43 por cento da escala de velocidade">
+                                <svg class="medidor-svg" viewBox="0 0 220 120" aria-hidden="true">
+                                    <path class="medidor-trilha" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                    <path class="medidor-progresso" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                </svg>
+                                <span class="medidor-valor">300 MEGA</span>
+                            </div>
+                            <p class="preco">R$ <strong>89,90</strong>/mês</p>
+                            <button class="btn abrir" data-plano="300 MEGA">Assine agora</button>
+                        </article>
+                        <article class="card destaque">
+                            <span class="selo">MAIS VENDIDO</span>
+                            <div class="nome">PLANO POWER</div>
+                            <div class="medidor" style="--progresso: 86" role="img" aria-label="600 Mega, 86 por cento da escala de velocidade">
+                                <svg class="medidor-svg" viewBox="0 0 220 120" aria-hidden="true">
+                                    <path class="medidor-trilha" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                    <path class="medidor-progresso" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                </svg>
+                                <span class="medidor-valor">600 MEGA</span>
+                            </div>
+                            <p class="preco">R$ <strong>99,90</strong>/mês</p>
+                            <button class="btn abrir" data-plano="600 MEGA">Assine agora</button>
+                        </article>
+                        <article class="card">
+                            <div class="nome">PLANO XTREME</div>
+                            <div class="medidor" style="--progresso: 100" role="img" aria-label="700 Mega, escala máxima de velocidade">
+                                <svg class="medidor-svg" viewBox="0 0 220 120" aria-hidden="true">
+                                    <path class="medidor-trilha" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                    <path class="medidor-progresso" pathLength="100" d="M 20 105 A 90 90 0 0 1 200 105" />
+                                </svg>
+                                <span class="medidor-valor">700 MEGA</span>
+                            </div>
+                            <p class="preco">R$ <strong>114,90</strong>/mês</p>
+                            <button class="btn abrir" data-plano="700 MEGA">Assine agora</button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section beneficios" id="beneficios">
+                <div class="container">
+                    <header class="cabeca">
+                        <span class="tagline" style="color: var(--ciano)">Benefícios</span>
+                        <h2>Internet para tudo o que faz parte do seu dia</h2>
+                        <p class="lead">
+                            Da reunião importante ao filme em família, uma rede preparada para acompanhar sua rotina.
+                        </p>
+                    </header>
+                    <div class="benefit-grid">
+                        <article class="benefit">
+                            <img src="assets-analista/Conexão rápida.webp" alt="Conexão rápida" />
+                            <h3>Conexão rápida</h3>
+                            <p>Mais agilidade e performance pela casa.</p>
+                        </article>
+                        <article class="benefit">
+                            <img src="assets-analista/Full HD.webp" alt="Full HD" />
+                            <h3>Full HD</h3>
+                            <p>Vídeos e séries com mais fluidez.</p>
+                        </article>
+                        <article class="benefit">
+                            <img src="assets-analista/Estabilidade.webp" alt="Estabilidade" />
+                            <h3>Estabilidade</h3>
+                            <p>Desempenho consistente para jogar e trabalhar.</p>
+                        </article>
+                        <article class="benefit">
+                            <img src="assets-analista/Suporte 24h.webp" alt="Suporte 24 horas" />
+                            <h3>Suporte 24 horas</h3>
+                            <p>Ajuda técnica quando você precisar.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="sobre">
+                <div class="container about">
+                    <div>
+                        <span class="tagline">Quem somos</span>
+                        <h2>Internet local em Vinhedo, Valinhos e Louveira</h2>
+                        <p class="lead">
+                            Desde 2010, a ViaFibra aproxima pessoas e oportunidades por meio das telecomunicações.
+                            Experiência regional e investimento contínuo sustentam uma rede feita para quem vive e
+                            trabalha por aqui.
+                        </p>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>+ de <b class="contador" data-final="15">15</b> mil</strong
+                                ><span>clientes atendidos</span>
+                            </div>
+                            <div class="stat">
+                                <strong><b class="contador" data-final="284">284</b> km²</strong
+                                ><span>em rede de fibra óptica</span
+                                ><em>Equivalente a mais de 38 mil campos de futebol.</em>
+                            </div>
+                        </div>
+                        <button class="btn abrir">Assine agora</button>
+                    </div>
+                    <img
+                        src="assets-analista/pc_gamer.jpg"
+                        alt="Computador gamer conectado à internet de fibra óptica ViaFibra"
+                        width="1420"
+                        height="578"
+                    />
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="foot-grid">
+                    <div>
+                        <img class="foot-logo" src="identidade-visual/logo.svg" alt="ViaFibra" />
+                        <p>Fibra óptica para casas e empresas da região.</p>
+                    </div>
+                    <div>
+                        <h3>Para você</h3>
+                        <a href="#planos">Internet fibra óptica</a
+                        ><a href="https://sac.viafibra.com.br/aceite" target="_blank" rel="noopener">SAC</a
+                        ><a href="https://wa.me/551938363630" target="_blank" rel="noopener">WhatsApp (19) 3836-3630</a>
+                    </div>
+                    <div>
+                        <h3>Corporativo</h3>
+                        <a href="https://wa.me/551938363630" target="_blank" rel="noopener">Plano empresarial</a
+                        ><a href="https://www.viafibra.com.br/blog/" target="_blank" rel="noopener">Blog</a>
+                    </div>
+                    <div>
+                        <h3>Redes sociais</h3>
+                        <a href="https://www.instagram.com/viafibra.oficial/" target="_blank" rel="noopener"
+                            >Instagram</a
+                        ><a href="https://www.facebook.com/viafibrainternet/" target="_blank" rel="noopener">Facebook</a
+                        ><a href="politica-de-privacidade.html">Política de Privacidade</a>
+                    </div>
+                </div>
+                <div class="copy">
+                    <span>© 2026 ViaFibra. Todos os direitos reservados.</span
+                    ><span
+                        >Feito e Gerenciado por Assessoria de Marketing 360
+                        <a href="https://grupoix.com.br" target="_blank" rel="noopener">Grupo IX</a></span
+                    >
+                </div>
+            </div>
+        </footer>
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="form-title">
+            <div class="dialog">
+                <button class="fechar" aria-label="Fechar">×</button><span class="tagline">Consulte a cobertura</span>
+                <h2 id="form-title">Encontre o plano ideal</h2>
+                <form id="form" action="enviar.php" method="post">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="name" />
+                        </div>
+                        <div class="field">
+                            <label for="telefone">WhatsApp</label
+                            ><input id="telefone" name="telefone" required autocomplete="tel" />
+                        </div>
+                        <div class="field">
+                            <label for="cidade">Cidade</label
+                            ><select id="cidade" name="cidade" required>
+                                <option value="">Selecione</option>
+                                <option>Vinhedo</option>
+                                <option>Valinhos</option>
+                                <option>Louveira</option>
+                                <option>Outra</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="bairro">Bairro</label><input id="bairro" name="bairro" required />
+                        </div>
+                        <div class="field full">
+                            <label for="plano">Plano</label
+                            ><select id="plano" name="plano" required>
+                                <option value="">Selecione um plano</option>
+                                <option value="300 MEGA">300 MEGA</option>
+                                <option value="600 MEGA">600 MEGA</option>
+                                <option value="700 MEGA">700 MEGA</option>
+                                <option value="PONTO ADICIONAL">PONTO ADICIONAL</option>
+                            </select>
+                        </div>
+                        <div class="hp">
+                            <label for="website">Não preencha</label
+                            ><input id="website" name="website" tabindex="-1" autocomplete="off" />
+                        </div>
+                    </div>
+                    <label class="consent"
+                        ><input type="checkbox" name="consentimento" value="1" required /><span
+                            >Li e concordo com a
+                            <a href="politica-de-privacidade.html" target="_blank" rel="noopener"
+                                >Política de Privacidade</a
+                            >
+                            e autorizo o contato.</span
+                        ></label
+                    ><button class="btn" type="submit">Enviar e falar no WhatsApp</button>
+                    <p class="status" id="status" role="status"></p>
+                </form>
+            </div>
+        </div>
+        <aside class="cookie" id="cookie">
+            <p>
+                Usamos cookies e dados para análise e marketing. Aceite ou recuse os cookies não essenciais. Veja a
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+            </p>
+            <div class="cookie-actions">
+                <button class="btn recusar" id="recusar">Recusar</button
+                ><button class="btn" id="aceitar">Aceitar</button>
+            </div>
+        </aside>
+        <script>
+            const slides = [...document.querySelectorAll(".slide")],
+                dots = document.querySelector(".dots");
+            let atual = 0,
+                tempo;
+            slides.forEach((_, i) => {
+                let b = document.createElement("button");
+                b.className = "dot" + (i ? "" : " ativa");
+                b.ariaLabel = "Exibir banner " + (i + 1);
+                b.onclick = () => mostrar(i);
+                dots.append(b);
+            });
+            function mostrar(i) {
+                slides[atual].classList.remove("ativa");
+                dots.children[atual].classList.remove("ativa");
+                atual = (i + slides.length) % slides.length;
+                slides[atual].classList.add("ativa");
+                dots.children[atual].classList.add("ativa");
+                clearInterval(tempo);
+                tempo = setInterval(() => mostrar(atual + 1), 6500);
+            }
+            document.querySelector(".proxima").onclick = () => mostrar(atual + 1);
+            document.querySelector(".anterior").onclick = () => mostrar(atual - 1);
+            tempo = setInterval(() => mostrar(atual + 1), 6500);
+            const modal = document.getElementById("modal"),
+                plano = document.getElementById("plano");
+            document.querySelectorAll(".abrir").forEach(
+                (b) =>
+                    (b.onclick = () => {
+                        plano.value = b.dataset.plano || "";
+                        modal.classList.add("aberto");
+                        document.body.classList.add("trava");
+                        nome.focus();
+                    })
+            );
+            function fechar() {
+                modal.classList.remove("aberto");
+                document.body.classList.remove("trava");
+            }
+            document.querySelector(".fechar").onclick = fechar;
+            modal.onclick = (e) => {
+                if (e.target === modal) fechar();
+            };
+            document.onkeydown = (e) => {
+                if (e.key === "Escape") fechar();
+            };
+            const chave = "viafibra_cookie_consent",
+                cookie = document.getElementById("cookie");
+            if (!localStorage.getItem(chave)) cookie.classList.add("show");
+            function consentir(v) {
+                localStorage.setItem(chave, v);
+                cookie.classList.remove("show");
+            }
+            aceitar.onclick = () => consentir("accepted");
+            recusar.onclick = () => consentir("declined");
+            form.onsubmit = async (e) => {
+                e.preventDefault();
+                status.textContent = "Enviando…";
+                let dados = new FormData(form);
+                try {
+                    let r = await fetch(form.action, { method: "POST", body: dados });
+                    if (!r.ok) throw 0;
+                    status.textContent = "Dados recebidos. Vamos continuar pelo WhatsApp.";
+                } catch (_) {
+                    status.textContent = "Vamos continuar pelo WhatsApp.";
+                }
+                let msg = encodeURIComponent(
+                    "Olá, encontrei vocês pelo site e quero informações sobre " + dados.get("plano") + "."
+                );
+                setTimeout(() => window.open("https://wa.me/5519988631670?text=" + msg, "_blank", "noopener"), 450);
+            };
+            const contadores = document.querySelectorAll(".contador");
+            const observar = new IntersectionObserver(
+                (entradas, obs) =>
+                    entradas.forEach((entrada) => {
+                        if (!entrada.isIntersecting) return;
+                        const el = entrada.target,
+                            final = Number(el.dataset.final),
+                            inicio = performance.now(),
+                            duracao = 1400;
+                        el.textContent = "0";
+                        function animar(agora) {
+                            const progresso = Math.min((agora - inicio) / duracao, 1);
+                            el.textContent = Math.round(final * (1 - Math.pow(1 - progresso, 3)));
+                            if (progresso < 1) requestAnimationFrame(animar);
+                        }
+                        requestAnimationFrame(animar);
+                        obs.unobserve(el);
+                    }),
+                { threshold: 0.55 }
+            );
+            contadores.forEach((el) => observar.observe(el));
+            const medidores = document.querySelectorAll(".medidor");
+            const observarMedidores = new IntersectionObserver(
+                (entradas, obs) =>
+                    entradas.forEach((entrada) => {
+                        if (!entrada.isIntersecting) return;
+                        entrada.target.classList.add("animar");
+                        obs.unobserve(entrada.target);
+                    }),
+                { threshold: 0.5 }
+            );
+            medidores.forEach((el) => observarMedidores.observe(el));
+        </script>
+    </body>
+</html>

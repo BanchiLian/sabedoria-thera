@@ -1,0 +1,282 @@
+{
+  "fonte": "https://viafibra.com.br/contrate",
+  "aviso": "ESTRUTURA do template escolhido, para INSPIRAR uma landing ORIGINAL. Não copie textos nem baixe as imagens do template; recrie com a identidade do CLIENTE (identidade.json). Aqui saem só padrões (ordem de seções, nav, CTAs, paleta, fontes).",
+  "meta": {
+    "title": "Via Fibra Contrate",
+    "descricao": "",
+    "og_titulo": "",
+    "og_imagem": ""
+  },
+  "identidade_visual": {
+    "logo_candidatos": [
+      "https://viafibra.com.br/contrate/wp-content/uploads/2025/11/logotipo-viafibra.png",
+      "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/logotipo-viafibra.png",
+      "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/logo_tocalivros.png",
+      "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/bitt-logo-1.png"
+    ],
+    "favicons": [
+      "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/cropped-logo_viafibra-1-32x32.png",
+      "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/cropped-logo_viafibra-1-192x192.png",
+      "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/cropped-logo_viafibra-1-180x180.png"
+    ],
+    "theme_color": "",
+    "paleta": {
+      "cores_marca": [
+        "#2575fc",
+        "#1c92da",
+        "#fe8f75",
+        "#7ed500",
+        "#4285f4",
+        "#f2709c",
+        "#0c5adb",
+        "#9460ff",
+        "#00e49a",
+        "#ff3984"
+      ],
+      "neutros": [
+        "#ffffff",
+        "#000000",
+        "#333333",
+        "#707070",
+        "#e7e7e7",
+        "#111111"
+      ]
+    },
+    "fontes": {
+      "font_families": [
+        "dashicons",
+        "-apple-system",
+        "monospace",
+        "eicons",
+        "Manrope",
+        "swiper-icons",
+        "Urbanist",
+        "Arial"
+      ],
+      "google_fonts": [
+        "https://fonts.googleapis.com/css?family=Manrope:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap",
+        "https://fonts.googleapis.com/css?family=Urbanist:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap"
+      ]
+    }
+  },
+  "design_tokens": {
+    "font_size_h1": [
+      "2.5rem",
+      "var( --e-global-typography-583e54c-font-size )"
+    ],
+    "font_size_h2": [
+      "2rem",
+      "var( --e-global-typography-5d167aa-font-size )"
+    ],
+    "font_size_body": [
+      "1rem",
+      "22px",
+      "13px",
+      "48px"
+    ],
+    "parallax_background_fixed": false,
+    "ocorrencias_background_fixed": 0,
+    "border_radius_comuns": [
+      "50%",
+      "0",
+      "10px",
+      "3px",
+      "inherit"
+    ],
+    "obs": "Replique a ESCALA dos títulos e os efeitos (ex.: parallax) do template. Se parallax_background_fixed=true, alguma seção usa background-attachment: fixed — normalmente faixas de CTA."
+  },
+  "estrutura": {
+    "n_secoes_tag": 9,
+    "n_blocos_layout": 9,
+    "topicos_da_pagina": [
+      {
+        "nivel": "h2",
+        "texto": "89,90"
+      },
+      {
+        "nivel": "h2",
+        "texto": "99,90"
+      },
+      {
+        "nivel": "h2",
+        "texto": "114,90"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Planos de Internet em Vinhedo, Valinhos e Louveira"
+      },
+      {
+        "nivel": "h2",
+        "texto": "PACOTES DE INTERNET COM"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Planos com valor acessível e conexão sem preocupação"
+      },
+      {
+        "nivel": "h2",
+        "texto": "Dúvidas Frequentes"
+      }
+    ],
+    "navegacao": [
+      "QUEM SOMOS",
+      "PLANOS",
+      "DÚVIDAS FREQUENTES",
+      "BENEFÍCIOS"
+    ],
+    "ctas_detectados": [
+      "ASSINE AGORA"
+    ]
+  },
+  "redes_sociais": {
+    "whatsapp": "https://wa.me/5519988631670?text=Ol%C3%A1!%20Estou%20em%20busca%20de%20uma%20internet%20de%20qualidade%20e%20gostaria%20de%20conhecer%20os%20planos%20dispon%C3%ADveis%20da%20ViaFibra%20para%20contratar%20o%20mais%20adequado.",
+    "instagram": "https://www.instagram.com/viafibra.oficial/",
+    "facebook": "https://www.facebook.com/viafibrainternet/"
+  },
+  "imagens_referencia": [
+    {
+      "url": "https://www.facebook.com/tr?id=1281859449505386&ev=PageView&noscript=1",
+      "alt": "",
+      "w": "1",
+      "h": "1"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2025/11/logotipo-viafibra.png",
+      "alt": "",
+      "w": "309",
+      "h": "104"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/logotipo-viafibra.png",
+      "alt": "",
+      "w": "309",
+      "h": "104"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/logo_tocalivros.png",
+      "alt": "",
+      "w": "163",
+      "h": "31"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/bitt-logo-1.png",
+      "alt": "",
+      "w": "76",
+      "h": "25"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Tap-Lingo.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Educa-Bolso.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Skyfit.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Mister-Wiz.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/logo_tocalivros.png",
+      "alt": "",
+      "w": "163",
+      "h": "31"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/bitt-logo-1.png",
+      "alt": "",
+      "w": "76",
+      "h": "25"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Tap-Lingo.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Educa-Bolso.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Skyfit.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Mister-Wiz.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/logo_tocalivros.png",
+      "alt": "",
+      "w": "163",
+      "h": "31"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2024/07/bitt-logo-1.png",
+      "alt": "",
+      "w": "76",
+      "h": "25"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Tap-Lingo.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Educa-Bolso.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Skyfit.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Mister-Wiz.webp",
+      "alt": "",
+      "w": "520",
+      "h": "320"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2025/01/planos-de-internet.webp",
+      "alt": "",
+      "w": "1920",
+      "h": "1080"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2026/01/Banner-613-x-735.jpg",
+      "alt": "",
+      "w": "613",
+      "h": "735"
+    },
+    {
+      "url": "https://viafibra.com.br/contrate/wp-content/uploads/2025/11/logotipo-viafibra.png",
+      "alt": "",
+      "w": "309",
+      "h": "104"
+    }
+  ]
+}

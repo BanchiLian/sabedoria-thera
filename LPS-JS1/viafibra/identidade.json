@@ -1,0 +1,305 @@
+{
+  "fonte": "https://viafibra.com.br/",
+  "aviso": "IDENTIDADE e FATOS do cliente para a nova landing. Cores, fontes, LOGO e FAVICON daqui SÃO a identidade a usar — o logo e o favicon foram BAIXADOS para identidade-visual/ e devem ser usados na página (não recrie logo textual nem favicon genérico). Os fatos INSPIRAM copy própria — nunca reproduza textos de marketing verbatim nem baixe as imagens de CONTEÚDO do site.",
+  "meta": {
+    "title": "ViaFibra | Internet Fibra Óptica em Vinhedo, Louveira e Valinhos",
+    "descricao": "Planos de internet fibra óptica para sua casa ou empresa, com instalação, Wi-Fi grátis, telefone e atendimento local.",
+    "og_titulo": "ViaFibra | Internet Fibra Óptica em Vinhedo, Louveira e Valinhos",
+    "og_imagem": "https://viafibra.com.br/images/Banner%201%20-%20Desktop.jpg"
+  },
+  "identidade_visual": {
+    "logo_candidatos": [
+      "https://viafibra.com.br/images/logo_viafibra.svg",
+      "https://viafibra.com.br/images/logo_tocalivros.png",
+      "https://viafibra.com.br/images/bitt-logo (1).png",
+      "https://viafibra.com.br/images/logo_viafibra_azul.svg"
+    ],
+    "og_imagem": "https://viafibra.com.br/images/Banner%201%20-%20Desktop.jpg",
+    "favicons": [
+      "https://viafibra.com.br/images/viafibra_favicon.png"
+    ],
+    "theme_color": "",
+    "logo_local": "identidade-visual\\logo.svg",
+    "favicon_local": "identidade-visual\\favicon.png",
+    "paleta": {
+      "cores_marca": [
+        "#0d6efd",
+        "#6c757d",
+        "#2f8cfb",
+        "#dc3545",
+        "#198754",
+        "#ffc107",
+        "#0dcaf0",
+        "#f7d909",
+        "#ffca2c",
+        "#0a58ca"
+      ],
+      "neutros": [
+        "#ffffff",
+        "#000000",
+        "#212529",
+        "#dee2e6",
+        "#f8f9fa",
+        "#e9ecef"
+      ]
+    },
+    "fontes": {
+      "font_families": [
+        "bootstrap-icons",
+        "bootstrap-icons !important",
+        "Arial"
+      ],
+      "google_fonts": []
+    }
+  },
+  "produto": {},
+  "precos_detectados": [
+    "R$0,15",
+    "R$0,16",
+    "R$0,17",
+    "R$0,27",
+    "R$0,28",
+    "R$0,32",
+    "R$0,89",
+    "R$0,91",
+    "R$0,94",
+    "R$114,90"
+  ],
+  "topicos_da_pagina": [
+    {
+      "nivel": "h1",
+      "texto": "Internet fibra óptica em Vinhedo, Louveira e Valinhos | ViaFibra"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Nossos Planos"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Quer acelerar seu Wi-Fi?Se liga nessas dicas!"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Planos de Telefonia eEmpresariais"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Feedback dos nossos clientes"
+    },
+    {
+      "nivel": "h2",
+      "texto": "Seja livre, seja Viafibra!"
+    }
+  ],
+  "possiveis_beneficios_ou_ficha": [],
+  "imagens_referencia": [
+    {
+      "url": "https://www.facebook.com/tr?id=1281859449505386&ev=PageView&noscript=1",
+      "alt": "",
+      "w": "1",
+      "h": "1"
+    },
+    {
+      "url": "https://viafibra.com.br/images/app via fibra banner.jpg",
+      "alt": "",
+      "w": "80%",
+      "h": "100%"
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banners Mobile APP.jpg",
+      "alt": "",
+      "w": "80%",
+      "h": "100%"
+    },
+    {
+      "url": "https://viafibra.com.br/images/logo_viafibra.svg",
+      "alt": "Logo ViaFibra",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 1 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 1 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 1 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 2 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 2 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 2 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 3 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 3 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 3 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 4 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 4 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 4 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 5 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 5 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 5 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 6 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 6 - Desktop.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/Banner 6 - Mobile.jpg",
+      "alt": "Banner promocional ViaFibra Internet Fibra Óptica",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_1.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_2.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_3.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_4.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_9.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_7.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_27.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    },
+    {
+      "url": "https://viafibra.com.br/images/icon_viafibra_6.svg",
+      "alt": "",
+      "w": "",
+      "h": ""
+    }
+  ],
+  "redes_sociais": {
+    "whatsapp": "https://wa.me/5519988631670?text=Ol%C3%A1%2C%20equipe%20Via%20Fibra!%20Quero%20saber%20mais%20sobre%20pre%C3%A7os%20e%20condi%C3%A7%C3%B5es%20da%20Internet%20Fibra%20%C3%93ptica.",
+    "facebook": "https://www.facebook.com/viafibrainternet",
+    "youtube": "https://www.youtube.com/channel/UCAJDO9RLoFRVHY4Rp2y7JjA",
+    "instagram": "https://www.instagram.com/viafibra.oficial/"
+  },
+  "contato": {
+    "emails": [
+      "aos@2.3.1",
+      "bootstrap-icons@1.8.1",
+      "bootstrap@5.0.2",
+      "core@2.9.2",
+      "viafibra@viafibra.com.br"
+    ],
+    "telefones": [
+      "(19) 98863-1670",
+      "0369766102",
+      "1281859449",
+      "1759859575",
+      "19 98863-1670"
+    ],
+    "whatsapp": [
+      "api.whatsapp.com/send/?phone=551938363630&text=Ol%C3%A1%2C+equipe+Via+Fibra%21+Acessei+o+site+e+tenho+interesse+em+contratar+um+plano+empresarial.+Poderiam+me+informar+as+op%C3%A7%C3%B5es+dispon%C3%ADveis+e+como+funciona+a+contrata%C3%A7%C3%A3o%3F&type=phone_number&app_absent=0",
+      "api.whatsapp.com/send/?phone=551938363630&text=Ol%C3%A1%2C+equipe+Via+Fibra%21+Quero+saber+mais+sobre+pre%C3%A7os+e+condi%C3%A7%C3%B5es+da+Internet+Fibra+%C3%93ptica.&type=phone_number&app_absent=0",
+      "wa.me/"
+    ]
+  },
+  "legal": {}
+}

@@ -1,0 +1,2881 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Therapeutica | Farmácia de manipulação em Mato Grosso</title>
+        <meta
+            name="description"
+            content="Há 29 anos, a Therapeutica une ciência, natureza e cuidado individualizado em quatro unidades de Sorriso – MT."
+        />
+        <link rel="icon" type="image/webp" href="assets-analista/Logo-Horizontal.webp" />
+        <style>
+            :root {
+                --coral: #ec633f;
+                --coral-dark: #c84b2d;
+                --yellow: #f5b752;
+                --green: #5a6c3c;
+                --sage: #97ae75;
+                --ink: #343531;
+                --gray: #666564;
+                --cream: #f5f1e8;
+                --paper: #fffdf8;
+                --line: rgba(90, 108, 60, 0.18);
+                --shadow: 0 24px 70px -35px rgba(45, 52, 32, 0.55);
+                --radius: 24px;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                overflow-x: hidden;
+                background: var(--paper);
+                color: var(--ink);
+                font-family: "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            button,
+            input,
+            select,
+            textarea {
+                font: inherit;
+            }
+            button,
+            a {
+                touch-action: manipulation;
+            }
+            :focus-visible {
+                outline: 3px solid var(--yellow);
+                outline-offset: 4px;
+            }
+            .container {
+                width: min(1180px, calc(100% - 40px));
+                margin-inline: auto;
+            }
+            .section {
+                padding: clamp(4.5rem, 8vw, 8rem) 0;
+            }
+            .kicker {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.65rem;
+                color: var(--coral-dark);
+                font-size: 0.75rem;
+                font-weight: 800;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+            .kicker:before {
+                content: "";
+                width: 30px;
+                height: 2px;
+                background: currentColor;
+            }
+            .heading {
+                max-width: 760px;
+                margin-top: 1rem;
+                color: var(--green);
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: clamp(2rem, 4vw, 3.35rem);
+                font-weight: 400;
+                line-height: 1.08;
+                letter-spacing: -0.025em;
+            }
+            .intro {
+                max-width: 620px;
+                margin-top: 1rem;
+                color: var(--gray);
+                font-size: clamp(1rem, 1.4vw, 1.16rem);
+            }
+            .button {
+                display: inline-flex;
+                min-height: 52px;
+                align-items: center;
+                justify-content: center;
+                gap: 0.7rem;
+                padding: 0.85rem 1.45rem;
+                border: 1px solid transparent;
+                border-radius: 999px;
+                font-weight: 800;
+                transition:
+                    transform 0.25s,
+                    background 0.25s,
+                    color 0.25s;
+            }
+            .button:hover {
+                transform: translateY(-3px);
+            }
+            .button-primary {
+                background: var(--coral);
+                color: white;
+                box-shadow: 0 14px 28px -16px var(--coral-dark);
+            }
+            .button-primary:hover {
+                background: var(--coral-dark);
+            }
+            .button-secondary {
+                border-color: var(--green);
+                color: var(--green);
+            }
+            .button-secondary:hover {
+                background: var(--green);
+                color: white;
+            }
+            .tag {
+                display: inline-block;
+                padding: 0.35rem 0.65rem;
+                border-radius: 999px;
+                background: rgba(245, 183, 82, 0.2);
+                color: var(--green);
+                font-size: 0.75rem;
+                font-weight: 800;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+            .site-header {
+                position: sticky;
+                top: 0;
+                z-index: 80;
+                background: rgba(255, 253, 248, 0.92);
+                border-bottom: 1px solid var(--line);
+                backdrop-filter: blur(16px);
+            }
+            .nav {
+                min-height: 76px;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+            .brand {
+                flex: 0 0 auto;
+            }
+            .brand img {
+                width: 168px;
+                height: 58px;
+                object-fit: contain;
+            }
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 1.7rem;
+                margin-left: auto;
+            }
+            .nav-links a {
+                color: var(--green);
+                font-size: 0.9rem;
+                font-weight: 800;
+            }
+            .nav-cta {
+                font-size: 0.88rem;
+            }
+            .menu-toggle {
+                display: none;
+                width: 44px;
+                height: 44px;
+                border: 0;
+                background: none;
+                color: var(--green);
+                font-size: 1.5rem;
+            }
+            .hero {
+                position: relative;
+                min-height: calc(100svh - 76px);
+                display: grid;
+                align-items: center;
+                padding: clamp(3rem, 6vw, 6rem) 0;
+                background: radial-gradient(circle at 12% 18%, rgba(245, 183, 82, 0.18), transparent 25%), var(--cream);
+            }
+            .hero:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background-image: radial-gradient(rgba(90, 108, 60, 0.16) 1px, transparent 1px);
+                background-size: 32px 32px;
+                mask-image: linear-gradient(to right, #000, transparent 55%);
+            }
+            .hero-grid {
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-template-columns: 1fr 0.96fr;
+                align-items: center;
+                gap: clamp(2rem, 6vw, 5.5rem);
+            }
+            .hero .kicker:before {
+                display: none;
+            }
+            .hero-copy h1 {
+                max-width: 700px;
+                margin: 1rem 0 1.2rem;
+                color: var(--green);
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: clamp(2.7rem, 5.3vw, 3.9rem);
+                font-weight: 400;
+                line-height: 1.02;
+                letter-spacing: -0.035em;
+            }
+            .hero-copy h1 em {
+                color: var(--coral);
+                font-weight: 400;
+            }
+            .hero-copy > p {
+                max-width: 570px;
+                color: var(--gray);
+                font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+            }
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+                margin-top: 2rem;
+            }
+            .hero-note {
+                display: block;
+                margin-top: 1rem;
+                color: var(--gray);
+                font-size: 0.8rem;
+            }
+            .hero-media {
+                position: relative;
+                aspect-ratio: 4/5;
+                border-radius: 180px 180px 28px 28px;
+                box-shadow: var(--shadow);
+                overflow: visible;
+                background: var(--cream);
+            }
+            .hero-slide {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100% !important;
+                object-fit: cover;
+                border-radius: inherit;
+                opacity: 0;
+                transition: opacity 0.8s;
+            }
+            .hero-slide.is-active {
+                opacity: 1;
+            }
+            .hero-dots {
+                position: absolute;
+                z-index: 3;
+                left: 24px;
+                bottom: 22px;
+                display: flex;
+                gap: 0.5rem;
+            }
+            .hero-dot {
+                width: 11px;
+                height: 11px;
+                padding: 0;
+                border: 2px solid white;
+                border-radius: 50%;
+                background: transparent;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+                cursor: pointer;
+            }
+            .hero-dot.is-active {
+                background: var(--yellow);
+            }
+            .experience-card {
+                position: absolute;
+                z-index: 3;
+                right: -150px;
+                bottom: 18px;
+                width: 210px;
+                padding: 1.25rem;
+                border: 1px solid rgba(255, 255, 255, 0.75);
+                border-radius: 20px;
+                background: rgba(255, 253, 248, 0.94);
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(12px);
+            }
+            .experience-card strong {
+                display: block;
+                color: var(--coral);
+                font-family: Georgia, serif;
+                font-size: 2rem;
+                line-height: 1.08;
+            }
+            .experience-card span {
+                display: block;
+                margin-top: 0.4rem;
+                color: var(--green);
+                font-size: 0.82rem;
+                font-weight: 800;
+            }
+            .trust {
+                position: relative;
+                background:
+                    linear-gradient(90deg, rgba(49, 61, 29, 0.97), rgba(49, 61, 29, 0.88) 54%, rgba(49, 61, 29, 0.3)),
+                    url("assets-analista/therapeutica-legado-confianca.webp") center/cover fixed;
+                color: white;
+            }
+            .trust .heading {
+                color: white;
+            }
+            .trust .intro {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .trust .kicker {
+                color: var(--yellow);
+            }
+            .trust .kicker:before {
+                display: none;
+            }
+            .metrics {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                margin-top: 2.6rem;
+            }
+            .metric {
+                padding: 1.6rem;
+                border: 1px solid rgba(255, 255, 255, 0.22);
+                border-radius: 18px;
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(10px);
+            }
+            .metric strong {
+                display: block;
+                color: var(--yellow);
+                font-family: Georgia, serif;
+                font-size: clamp(2.3rem, 5vw, 4rem);
+                font-weight: 400;
+                line-height: 1;
+            }
+            .metric span {
+                display: block;
+                margin-top: 0.6rem;
+                font-weight: 800;
+            }
+            .balance {
+                background: var(--paper);
+            }
+            .split {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                gap: clamp(2.5rem, 7vw, 6rem);
+            }
+            .portrait {
+                position: relative;
+            }
+            .portrait img {
+                width: 100%;
+                aspect-ratio: 1/1.05;
+                object-fit: cover;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+            }
+            .petal {
+                position: absolute;
+                left: -26px;
+                bottom: -26px;
+                width: 120px;
+                height: 120px;
+                border: 18px solid var(--yellow);
+                border-radius: 65% 35% 60% 40%;
+                opacity: 0.55;
+            }
+            .principles {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .principle {
+                padding: 1.15rem;
+                border-left: 3px solid var(--coral);
+                background: var(--cream);
+            }
+            .principle b {
+                display: block;
+                color: var(--green);
+            }
+            .principle span {
+                color: var(--gray);
+                font-size: 0.9rem;
+            }
+            .approaches {
+                background:
+                    linear-gradient(90deg, rgba(255, 253, 248, 0.98), rgba(255, 253, 248, 0.9)),
+                    url("assets-analista/therapeutica-abordagens.webp") center/cover fixed;
+            }
+            .approaches .kicker:before {
+                display: none;
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                margin-top: 2.5rem;
+            }
+            .card {
+                min-height: 215px;
+                padding: 1.5rem;
+                border: 1px solid var(--line);
+                border-radius: 18px;
+                background: rgba(255, 253, 248, 0.88);
+                box-shadow: 0 12px 35px -30px var(--ink);
+                backdrop-filter: blur(9px);
+                transition: transform 0.25s;
+            }
+            .card:hover {
+                transform: translateY(-6px);
+            }
+            .card-number {
+                display: grid;
+                width: 42px;
+                height: 42px;
+                place-items: center;
+                border-radius: 50%;
+                background: var(--green);
+                color: white;
+                font-family: Georgia, serif;
+            }
+            .card h3 {
+                margin-top: 1rem;
+                color: var(--green);
+                font-family: Georgia, serif;
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+            .card p {
+                margin-top: 0.45rem;
+                color: var(--gray);
+                font-size: 0.92rem;
+            }
+            .recipe {
+                background: var(--green);
+                color: white;
+            }
+            .recipe .kicker {
+                color: var(--yellow);
+            }
+            .recipe .heading {
+                color: white;
+            }
+            .recipe .intro {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .recipe-flow {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                margin-top: 2.5rem;
+            }
+            .recipe-step {
+                position: relative;
+                padding: 1.7rem;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.08);
+            }
+            .recipe-step strong {
+                display: block;
+                color: var(--yellow);
+                font-family: Georgia, serif;
+                font-size: 3.2rem;
+                line-height: 1;
+            }
+            .recipe-step h3 {
+                margin-top: 1rem;
+                font-size: 1.15rem;
+            }
+            .recipe-step p {
+                margin-top: 0.4rem;
+                color: rgba(255, 255, 255, 0.76);
+                font-size: 0.92rem;
+            }
+            .recipe-action {
+                margin-top: 2rem;
+            }
+            .wa-icon {
+                width: 21px;
+                height: 21px;
+                fill: currentColor;
+            }
+            .process {
+                background: var(--cream);
+            }
+            .process-layout {
+                display: grid;
+                grid-template-columns: 0.88fr 1.12fr;
+                align-items: center;
+                gap: clamp(2.5rem, 7vw, 6rem);
+            }
+            .process-media img {
+                width: 100%;
+                aspect-ratio: 4/5;
+                object-fit: cover;
+                border-radius: 28px 150px 28px 28px;
+                box-shadow: var(--shadow);
+            }
+            .steps {
+                margin-top: 2rem;
+                border-top: 1px solid var(--line);
+            }
+            .step {
+                display: grid;
+                grid-template-columns: 52px 1fr;
+                gap: 1rem;
+                padding: 1.1rem 0;
+                border-bottom: 1px solid var(--line);
+            }
+            .step b {
+                color: var(--coral);
+                font-family: Georgia, serif;
+                font-size: 1.55rem;
+            }
+            .step h3 {
+                color: var(--green);
+                font-size: 1.05rem;
+            }
+            .step p {
+                color: var(--gray);
+                font-size: 0.9rem;
+            }
+            .quality {
+                position: relative;
+                background: var(--green);
+                color: white;
+            }
+            .quality .heading {
+                color: white;
+            }
+            .quality .intro {
+                color: rgba(255, 255, 255, 0.78);
+            }
+            .quality .kicker {
+                color: var(--yellow);
+            }
+            .quality-list {
+                display: grid;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .quality-point {
+                display: flex;
+                gap: 1rem;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+            }
+            .quality-point span {
+                display: grid;
+                flex: 0 0 38px;
+                height: 38px;
+                place-items: center;
+                border-radius: 50%;
+                background: var(--yellow);
+                color: var(--green);
+                font-weight: 900;
+            }
+            .quality-point p {
+                color: rgba(255, 255, 255, 0.76);
+                font-size: 0.9rem;
+            }
+            .quality-photo img {
+                width: 100%;
+                aspect-ratio: 1/1.05;
+                object-fit: cover;
+                border-radius: var(--radius);
+                box-shadow: 0 30px 80px -40px #000;
+            }
+            .units {
+                background: var(--paper);
+            }
+            .units-top {
+                display: grid;
+                grid-template-columns: 0.8fr 1.2fr;
+                align-items: end;
+                gap: 2rem;
+            }
+            .unit-map {
+                margin-top: 2.5rem;
+                position: relative;
+            }
+            .unit-map > img {
+                width: 100%;
+                max-height: 520px;
+                object-fit: cover;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+            }
+            .unit-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                margin-top: -72px;
+                padding: 0 2rem;
+                position: relative;
+            }
+            .unit-card {
+                padding: 1.25rem;
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                background: var(--paper);
+                box-shadow: var(--shadow);
+            }
+            .unit-card h3 {
+                margin: 0.55rem 0;
+                color: var(--green);
+            }
+            .unit-card p {
+                color: var(--gray);
+                font-size: 0.86rem;
+            }
+            .unit-card .button {
+                width: 100%;
+                min-height: 44px;
+                margin-top: 1rem;
+                padding: 0.6rem;
+                font-size: 0.84rem;
+            }
+            .stories {
+                background: var(--cream);
+            }
+            .story-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+                margin-top: 2.5rem;
+            }
+            .story {
+                padding: 1.7rem;
+                border-radius: 18px;
+                background: var(--paper);
+                border-top: 4px solid var(--coral);
+            }
+            .story .quote {
+                color: var(--yellow);
+                font-family: Georgia, serif;
+                font-size: 2.5rem;
+                line-height: 0.6;
+            }
+            .story blockquote {
+                margin-top: 1rem;
+                color: var(--ink);
+                font-family: Georgia, serif;
+                font-size: 1.08rem;
+                line-height: 1.55;
+            }
+            .story small {
+                display: block;
+                margin-top: 1rem;
+                color: var(--coral-dark);
+            }
+            .disclaimer {
+                margin-top: 1.2rem;
+                color: var(--gray);
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            .faq {
+                background: var(--paper);
+            }
+            .faq-wrap {
+                display: grid;
+                grid-template-columns: 0.72fr 1.28fr;
+                gap: clamp(2rem, 7vw, 6rem);
+            }
+            .faq-list {
+                border-top: 1px solid var(--line);
+            }
+            details {
+                border-bottom: 1px solid var(--line);
+            }
+            summary {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: 1.3rem 0;
+                color: var(--green);
+                font-weight: 800;
+                cursor: pointer;
+                list-style: none;
+            }
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            summary span {
+                color: var(--coral);
+                font-size: 1.4rem;
+            }
+            .answer {
+                padding: 0 2rem 1.3rem 0;
+                color: var(--gray);
+            }
+            .contact {
+                position: relative;
+                background:
+                    linear-gradient(90deg, rgba(39, 48, 24, 0.96), rgba(39, 48, 24, 0.84) 52%, rgba(39, 48, 24, 0.25)),
+                    url("assets-analista/therapeutica-cta-atendimento.webp") center/cover fixed;
+                color: white;
+            }
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 0.9fr 1.1fr;
+                align-items: start;
+                gap: clamp(2.5rem, 7vw, 6rem);
+            }
+            .contact .heading {
+                color: white;
+            }
+            .contact .intro {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .contact .kicker {
+                color: var(--yellow);
+            }
+            .regulatory {
+                display: block;
+                margin-top: 1.3rem;
+                color: rgba(255, 255, 255, 0.65);
+                font-size: 0.8rem;
+            }
+            .lead-form {
+                padding: 2rem;
+                border-radius: var(--radius);
+                background: rgba(255, 253, 248, 0.97);
+                color: var(--ink);
+                box-shadow: var(--shadow);
+            }
+            .lead-form h3 {
+                color: var(--green);
+                font-family: Georgia, serif;
+                font-size: 1.7rem;
+                font-weight: 400;
+            }
+            .field {
+                margin-top: 0.85rem;
+            }
+            .field label {
+                display: block;
+                margin-bottom: 0.3rem;
+                color: var(--green);
+                font-size: 0.86rem;
+                font-weight: 800;
+            }
+            .field input,
+            .field select,
+            .field textarea {
+                width: 100%;
+                padding: 0.78rem 0.85rem;
+                border: 1px solid #85877f;
+                border-radius: 9px;
+                background: white;
+                color: var(--ink);
+            }
+            .field textarea {
+                min-height: 90px;
+                resize: vertical;
+            }
+            .honeypot {
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            .consent {
+                display: flex;
+                gap: 0.65rem;
+                align-items: flex-start;
+                margin-top: 1rem;
+                color: var(--gray);
+                font-size: 0.82rem;
+            }
+            .consent input {
+                margin-top: 0.25rem;
+            }
+            .consent a {
+                text-decoration: underline;
+                color: var(--coral-dark);
+            }
+            .lead-form .button {
+                width: 100%;
+                margin-top: 1rem;
+                border: 0;
+            }
+            .form-status {
+                min-height: 1.4rem;
+                margin-top: 0.55rem;
+                color: var(--gray);
+                font-size: 0.82rem;
+            }
+            footer {
+                padding: 3.5rem 0;
+                background: #30372a;
+                color: rgba(255, 255, 255, 0.75);
+            }
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1.25fr 1fr 1fr 1.35fr;
+                gap: 2rem;
+            }
+            .footer-logo {
+                width: 200px;
+                padding: 0.45rem;
+                border-radius: 8px;
+                background: white;
+            }
+            .footer-grid h4 {
+                margin-bottom: 0.65rem;
+                color: var(--yellow);
+                font-size: 0.78rem;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+            }
+            .footer-grid a,
+            .footer-grid p {
+                font-size: 0.88rem;
+            }
+            .footer-details {
+                display: grid;
+                gap: 0.35rem;
+                margin-top: 1rem;
+            }
+            .footer-details b {
+                color: white;
+            }
+            .social-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+                margin-top: 0.7rem;
+            }
+            .social-links span {
+                font-size: 0.85rem;
+            }
+            .newsletter-form {
+                margin-top: 0.7rem;
+            }
+            .newsletter-row {
+                display: flex;
+            }
+            .newsletter-row input {
+                min-width: 0;
+                flex: 1;
+                padding: 0.7rem;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 8px 0 0 8px;
+                background: rgba(255, 255, 255, 0.08);
+                color: white;
+            }
+            .newsletter-row input::placeholder {
+                color: rgba(255, 255, 255, 0.55);
+            }
+            .newsletter-row button {
+                padding: 0.7rem 0.9rem;
+                border: 0;
+                border-radius: 0 8px 8px 0;
+                background: var(--coral);
+                color: white;
+                font-weight: 800;
+                cursor: pointer;
+            }
+            .newsletter-consent {
+                display: flex;
+                gap: 0.5rem;
+                align-items: flex-start;
+                margin-top: 0.7rem;
+                font-size: 0.72rem;
+            }
+            .newsletter-consent input {
+                margin-top: 0.2rem;
+            }
+            .newsletter-consent a {
+                text-decoration: underline;
+                color: var(--yellow);
+            }
+            .newsletter-status {
+                min-height: 1.2rem;
+                margin-top: 0.4rem;
+                font-size: 0.75rem;
+            }
+            .legal {
+                margin-top: 2.5rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.14);
+                font-size: 0.78rem;
+            }
+            .legal a {
+                color: var(--yellow);
+                text-decoration: underline;
+            }
+            .cookie-banner {
+                position: fixed;
+                z-index: 100;
+                right: 18px;
+                bottom: 18px;
+                left: 18px;
+                max-width: calc(100vw - 36px);
+                display: none;
+                grid-template-columns: minmax(0, 1fr) auto;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.15rem 1.3rem;
+                border-left: 5px solid var(--coral);
+                border-radius: 14px;
+                background: white;
+                box-shadow: 0 16px 55px rgba(0, 0, 0, 0.25);
+            }
+            .cookie-banner.is-open {
+                display: grid;
+            }
+            .cookie-banner p {
+                min-width: 0;
+                overflow-wrap: anywhere;
+                color: var(--gray);
+                font-size: 0.86rem;
+            }
+            .cookie-banner a {
+                text-decoration: underline;
+                color: var(--coral-dark);
+            }
+            .cookie-actions {
+                display: flex;
+                gap: 0.6rem;
+            }
+            .cookie-actions button {
+                padding: 0.7rem 1rem;
+                border-radius: 999px;
+                font-weight: 800;
+                cursor: pointer;
+            }
+            .cookie-reject {
+                border: 1px solid var(--gray);
+                background: white;
+                color: var(--ink);
+            }
+            .cookie-accept {
+                border: 1px solid var(--coral);
+                background: var(--coral);
+                color: white;
+            }
+            @media (max-width: 900px) {
+                .nav-links {
+                    position: fixed;
+                    inset: 76px 0 auto 0;
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 1.5rem 20px;
+                    background: var(--paper);
+                    box-shadow: var(--shadow);
+                }
+                .nav-links.is-open {
+                    display: flex;
+                }
+                .nav > .nav-cta {
+                    margin-left: auto;
+                }
+                .menu-toggle {
+                    display: block;
+                }
+                .hero-grid,
+                .split,
+                .process-layout,
+                .units-top,
+                .faq-wrap,
+                .contact-grid {
+                    grid-template-columns: 1fr;
+                }
+                .hero {
+                    min-height: auto;
+                }
+                .hero-media {
+                    max-width: 580px;
+                    margin-inline: auto;
+                }
+                .cards {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .metrics,
+                .story-grid,
+                .recipe-flow {
+                    grid-template-columns: 1fr;
+                }
+                .unit-grid {
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: -45px;
+                }
+                .quality-photo {
+                    order: -1;
+                }
+                .trust,
+                .approaches,
+                .contact {
+                    background-attachment: scroll;
+                }
+                .footer-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            @media (max-width: 560px) {
+                .container {
+                    width: calc(100vw - 32px);
+                    max-width: 100%;
+                }
+                .hero-grid > * {
+                    min-width: 0;
+                }
+                .hero-copy,
+                .hero-media {
+                    width: calc(100vw - 92px);
+                    max-width: 100%;
+                }
+                .hero-copy {
+                    width: calc(100vw - 32px);
+                }
+                .hero-copy h1 {
+                    font-size: clamp(2.25rem, 10vw, 2.7rem);
+                    overflow-wrap: anywhere;
+                }
+                .hero-copy > p {
+                    overflow-wrap: anywhere;
+                }
+                .nav > .nav-cta {
+                    display: none;
+                }
+                .brand img {
+                    width: 150px;
+                }
+                .hero-actions {
+                    flex-direction: column;
+                }
+                .hero-actions .button {
+                    width: 100%;
+                }
+                .experience-card {
+                    right: -76px;
+                    bottom: 14px;
+                    width: 180px;
+                    padding: 1rem;
+                }
+                .experience-card strong {
+                    font-size: 1.75rem;
+                }
+                .principles,
+                .cards,
+                .unit-grid {
+                    grid-template-columns: 1fr;
+                }
+                .unit-grid {
+                    margin-top: 1rem;
+                    padding: 0;
+                }
+                .cookie-banner {
+                    grid-template-columns: 1fr;
+                }
+                .cookie-actions {
+                    flex-wrap: wrap;
+                }
+                .footer-logo {
+                    width: 180px;
+                }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    scroll-behavior: auto !important;
+                    animation: none !important;
+                    transition: none !important;
+                }
+                .reveal {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            .experience-card {
+                right: -180px;
+            }
+            @media (max-width: 560px) {
+                .experience-card {
+                    right: -105px;
+                }
+            }
+            .kicker:before {
+                display: none !important;
+            }
+            .kicker {
+                gap: 0;
+            }
+            /* Herói com os banners horizontais exibidos por inteiro. */
+            .hero > .container {
+                width: min(1540px, calc(100% - 64px));
+            }
+            .hero-grid {
+                grid-template-columns: minmax(430px, 0.72fr) minmax(0, 1.28fr);
+                gap: clamp(2rem, 4vw, 4.5rem);
+            }
+            .hero-copy {
+                justify-self: start;
+            }
+            .hero-media {
+                width: 100%;
+                aspect-ratio: 1920/700;
+                border-radius: 110px 110px 26px 26px;
+                background: #fff;
+            }
+            .hero-slide {
+                object-fit: contain;
+            }
+            @media (max-width: 1600px) {
+                .experience-card {
+                    right: 0;
+                    bottom: -74px;
+                }
+                .hero-media {
+                    margin-bottom: 74px;
+                }
+            }
+            @media (max-width: 1200px) {
+                .hero > .container {
+                    width: min(1180px, calc(100% - 40px));
+                }
+                .hero-grid {
+                    grid-template-columns: 0.82fr 1.18fr;
+                }
+                .hero-copy h1 {
+                    font-size: clamp(2.4rem, 4.5vw, 3.35rem);
+                }
+            }
+            @media (max-width: 900px) {
+                .hero > .container {
+                    width: min(100% - 40px, 760px);
+                }
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                }
+                .hero-media {
+                    width: 100%;
+                    max-width: none;
+                    aspect-ratio: 1920/700;
+                    margin: 0 0 80px;
+                }
+                .experience-card {
+                    right: 12px;
+                    bottom: -66px;
+                }
+            }
+            @media (max-width: 560px) {
+                .hero > .container {
+                    width: calc(100% - 32px);
+                }
+                .hero-media {
+                    width: 100%;
+                    aspect-ratio: 1920/700;
+                    border-radius: 48px 48px 18px 18px;
+                }
+                .experience-card {
+                    right: 8px;
+                    bottom: -72px;
+                    width: 180px;
+                }
+                .hero-dots {
+                    left: 16px;
+                    bottom: 12px;
+                }
+            }
+            /* Carrossel ocupando todo o fundo do herói, sem a antiga moldura. */
+            .hero {
+                min-height: calc(100svh - 76px);
+                overflow: hidden;
+                background: var(--cream);
+            }
+            .hero:after {
+                z-index: 1;
+                background: linear-gradient(
+                    90deg,
+                    rgba(255, 253, 248, 0.97) 0%,
+                    rgba(255, 253, 248, 0.9) 30%,
+                    rgba(255, 253, 248, 0.58) 48%,
+                    rgba(255, 253, 248, 0.08) 72%
+                );
+                mask-image: none;
+            }
+            .hero > .container {
+                width: min(1680px, calc(100% - 64px));
+            }
+            .hero-grid {
+                position: static;
+                z-index: auto;
+                display: block;
+            }
+            .hero-copy {
+                position: relative;
+                z-index: 5;
+                width: min(620px, 46%);
+                padding-block: clamp(4rem, 9vw, 8rem);
+            }
+            .hero-media {
+                position: absolute;
+                z-index: 0;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                aspect-ratio: auto;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background: var(--cream);
+            }
+            .hero-slide {
+                object-fit: cover;
+                border-radius: 0;
+            }
+            .hero-dots {
+                z-index: 4;
+                left: auto;
+                right: clamp(24px, 4vw, 72px);
+                bottom: 28px;
+            }
+            .experience-card {
+                display: none;
+            }
+            @media (max-width: 900px) {
+                .hero > .container {
+                    width: calc(100% - 40px);
+                }
+                .hero-copy {
+                    width: min(610px, 78%);
+                    padding-block: 5rem;
+                }
+                .hero-media {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    aspect-ratio: auto;
+                }
+                .hero:after {
+                    background: linear-gradient(
+                        90deg,
+                        rgba(255, 253, 248, 0.96),
+                        rgba(255, 253, 248, 0.78) 62%,
+                        rgba(255, 253, 248, 0.28)
+                    );
+                }
+            }
+            @media (max-width: 560px) {
+                .hero > .container {
+                    width: calc(100% - 32px);
+                }
+                .hero-copy {
+                    width: 100%;
+                    padding-block: 4rem 6rem;
+                }
+                .hero-media {
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: auto;
+                    border-radius: 0;
+                }
+                .hero-slide {
+                    object-position: center;
+                }
+                .hero:after {
+                    background: rgba(255, 253, 248, 0.82);
+                }
+                .hero-dots {
+                    left: 16px;
+                    right: auto;
+                    bottom: 18px;
+                }
+            }
+            /* Banner completo e conteúdo concentrado na base da seção. */
+            .hero {
+                min-height: 920px;
+            }
+            .hero:after {
+                background: linear-gradient(
+                    to top,
+                    rgba(255, 253, 248, 0.99) 0%,
+                    rgba(255, 253, 248, 0.94) 24%,
+                    rgba(255, 253, 248, 0.62) 44%,
+                    rgba(255, 253, 248, 0.16) 67%,
+                    transparent 82%
+                );
+            }
+            .hero-slide {
+                object-fit: contain;
+                object-position: center top;
+                transform: scale(0.96);
+                transform-origin: center top;
+            }
+            .hero-copy {
+                width: min(620px, 48%);
+                margin-top: clamp(28rem, 55vh, 34rem);
+                padding: 0 0 3rem;
+            }
+            @media (max-width: 900px) {
+                .hero {
+                    min-height: 820px;
+                }
+                .hero-copy {
+                    width: min(610px, 82%);
+                    margin-top: clamp(25rem, 52vh, 30rem);
+                    padding: 0 0 5rem;
+                }
+                .hero:after {
+                    background: linear-gradient(
+                        to top,
+                        rgba(255, 253, 248, 0.99) 0%,
+                        rgba(255, 253, 248, 0.94) 34%,
+                        rgba(255, 253, 248, 0.5) 62%,
+                        transparent 84%
+                    );
+                }
+            }
+            @media (max-width: 560px) {
+                .hero {
+                    min-height: 780px;
+                }
+                .hero-slide {
+                    transform: scale(0.98);
+                }
+                .hero-copy {
+                    width: 100%;
+                    margin-top: 44vh;
+                    padding: 0 0 5rem;
+                }
+                .hero:after {
+                    background: linear-gradient(
+                        to top,
+                        rgba(255, 253, 248, 0.99) 0%,
+                        rgba(255, 253, 248, 0.96) 48%,
+                        rgba(255, 253, 248, 0.55) 72%,
+                        transparent 92%
+                    );
+                }
+            }
+            /* Divisão definitiva do herói: 25% conteúdo e 75% banner. */
+            .hero {
+                min-height: calc(100svh - 76px);
+                padding: 0;
+                overflow: hidden;
+                background: var(--cream);
+            }
+            .hero:after {
+                display: none;
+            }
+            .hero > .container {
+                width: 100%;
+                max-width: none;
+            }
+            .hero-grid {
+                position: relative;
+                display: grid;
+                grid-template-columns: 25% 75%;
+                min-height: calc(100svh - 76px);
+                gap: 0;
+            }
+            .hero-copy {
+                position: relative;
+                isolation: isolate;
+                z-index: 2;
+                grid-column: 1;
+                grid-row: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: clamp(2rem, 4vw, 4.5rem);
+                overflow: hidden;
+                background: var(--cream);
+            }
+            .hero-copy:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                pointer-events: none;
+                background-image: radial-gradient(circle, rgba(240, 96, 56, 0.34) 2px, transparent 2.5px);
+                background-size: 30px 30px;
+                background-position: 0 0;
+                opacity: 0;
+                transform: scale(1.04);
+                transition:
+                    opacity 0.35s ease,
+                    background-position 0.7s ease,
+                    transform 0.7s ease;
+            }
+            .hero-copy:hover:before {
+                opacity: 1;
+                background-position: 15px 15px;
+                transform: scale(1);
+            }
+            .hero-copy h1 {
+                font-size: clamp(2.25rem, 3.2vw, 3.25rem);
+            }
+            .hero-copy > p {
+                font-size: 1rem;
+            }
+            .hero-actions {
+                gap: 0.65rem;
+            }
+            .hero-actions .button {
+                padding: 0.75rem 1.05rem;
+                font-size: 0.82rem;
+            }
+            .hero-media {
+                position: relative;
+                z-index: 1;
+                inset: auto;
+                grid-column: 2;
+                grid-row: 1;
+                width: 100%;
+                height: 100%;
+                min-height: calc(100svh - 76px);
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background: var(--cream);
+            }
+            .hero-slide {
+                width: 100%;
+                height: 100% !important;
+                padding: 0;
+                object-fit: contain;
+                object-position: center;
+                transform: none;
+                border-radius: 0;
+            }
+            .hero-dots {
+                left: 50%;
+                right: auto;
+                bottom: 22px;
+                transform: translateX(-50%);
+            }
+            @media (max-width: 1000px) {
+                .hero-grid {
+                    grid-template-columns: 34% 66%;
+                }
+                .hero-copy {
+                    padding: 2rem;
+                }
+                .hero-copy h1 {
+                    font-size: clamp(2rem, 4vw, 2.6rem);
+                }
+                .hero-actions {
+                    flex-direction: column;
+                }
+                .hero-actions .button {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 760px) {
+                .hero {
+                    min-height: auto;
+                }
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                    min-height: auto;
+                }
+                .hero-media {
+                    grid-column: 1;
+                    grid-row: 1;
+                    width: 100%;
+                    height: auto;
+                    min-height: 0;
+                    aspect-ratio: 1920/700;
+                }
+                .hero-copy {
+                    grid-column: 1;
+                    grid-row: 2;
+                    width: 100%;
+                    height: auto;
+                    min-height: 430px;
+                    padding: 2.5rem 20px;
+                }
+                .hero-slide {
+                    object-fit: contain;
+                }
+                .hero-dots {
+                    bottom: 12px;
+                }
+                .hero-actions {
+                    flex-direction: column;
+                }
+                .hero-actions .button {
+                    width: 100%;
+                }
+            }
+            /* A altura acompanha exatamente a proporção do banner, sem sobras. */
+            .hero {
+                min-height: 0;
+            }
+            .hero-grid {
+                min-height: 0;
+                align-items: stretch;
+            }
+            .hero-grid > * {
+                min-width: 0;
+            }
+            .hero-media {
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 1920/700;
+            }
+            .hero-copy {
+                height: auto;
+                min-height: 0;
+            }
+            @media (max-width: 760px) {
+                .hero-media {
+                    height: auto;
+                    aspect-ratio: 1920/700;
+                }
+                .hero-copy {
+                    min-height: 430px;
+                }
+            }
+            /* Carrossel principal em largura total. */
+            .hero {
+                min-height: 0;
+                padding: 0;
+                background: var(--cream);
+            }
+            .hero > .container {
+                width: 100%;
+                max-width: none;
+            }
+            .hero-grid {
+                display: block;
+                min-height: 0;
+            }
+            .hero-media {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 1920/700;
+                margin: 0;
+                background: var(--cream);
+            }
+            .hero-slide {
+                width: 100%;
+                height: 100% !important;
+                object-fit: cover;
+                object-position: center;
+                transform: none;
+            }
+            .hero-dots {
+                left: 50%;
+                right: auto;
+                bottom: 18px;
+                transform: translateX(-50%);
+            }
+            /* Nova seção para o conteúdo que antes ficava junto aos banners. */
+            .hero-intro {
+                position: relative;
+                padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+                background: var(--cream);
+                overflow: hidden;
+            }
+            .hero-intro:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background-image: radial-gradient(rgba(240, 96, 56, 0.14) 1.5px, transparent 2px);
+                background-size: 34px 34px;
+                opacity: 0.32;
+                mask-image: linear-gradient(90deg, #000, transparent 62%);
+            }
+            .hero-intro-grid {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 0.95fr;
+                align-items: center;
+                gap: clamp(3rem, 8vw, 7rem);
+            }
+            .intro-copy h1 {
+                max-width: 690px;
+                margin: 1rem 0 1.2rem;
+                color: var(--green);
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: clamp(2.7rem, 5.3vw, 3.9rem);
+                font-weight: 400;
+                line-height: 1.02;
+                letter-spacing: -0.035em;
+            }
+            .intro-copy h1 em {
+                color: var(--coral);
+                font-weight: 400;
+            }
+            .intro-copy > p {
+                max-width: 570px;
+                color: var(--gray);
+                font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+            }
+            .intro-visual {
+                position: relative;
+                aspect-ratio: 4/5;
+                border-radius: 180px 180px 28px 28px;
+                box-shadow: var(--shadow);
+            }
+            .intro-visual > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+            .intro-experience {
+                position: absolute;
+                right: -32px;
+                bottom: 26px;
+                width: 210px;
+                padding: 1.25rem;
+                border: 1px solid rgba(255, 255, 255, 0.75);
+                border-radius: 20px;
+                background: rgba(255, 253, 248, 0.94);
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(12px);
+            }
+            .intro-experience strong {
+                display: block;
+                color: var(--coral);
+                font-family: Georgia, serif;
+                font-size: 2rem;
+                line-height: 1.08;
+            }
+            .intro-experience span {
+                display: block;
+                margin-top: 0.4rem;
+                color: var(--green);
+                font-size: 0.82rem;
+                font-weight: 800;
+            }
+            @media (max-width: 900px) {
+                .hero-intro-grid {
+                    grid-template-columns: 1fr;
+                }
+                .intro-visual {
+                    width: min(580px, 100%);
+                    margin: auto;
+                }
+                .intro-experience {
+                    right: -10px;
+                }
+            }
+            @media (max-width: 560px) {
+                .hero-dots {
+                    bottom: 8px;
+                }
+                .hero-intro {
+                    padding: 4rem 0;
+                }
+                .intro-copy h1 {
+                    font-size: clamp(2.25rem, 10vw, 2.7rem);
+                }
+                .hero-actions {
+                    flex-direction: column;
+                }
+                .hero-actions .button {
+                    width: 100%;
+                }
+                .intro-visual {
+                    width: calc(100% - 20px);
+                }
+                .intro-experience {
+                    right: -10px;
+                    bottom: 18px;
+                    width: 180px;
+                    padding: 1rem;
+                }
+                .intro-experience strong {
+                    font-size: 1.7rem;
+                }
+            }
+            .quick-quote {
+                display: flex;
+                width: 100%;
+                min-height: 88px;
+                align-items: center;
+                justify-content: center;
+                padding: 1.25rem clamp(1rem, 5vw, 4rem);
+                background: var(--coral);
+                color: #fff;
+                text-align: center;
+                font-size: clamp(1.05rem, 2vw, 1.45rem);
+                font-weight: 800;
+                line-height: 1.35;
+                transition: background 0.25s;
+            }
+            .quick-quote:hover {
+                background: var(--coral-dark);
+            }
+            .quick-quote:focus-visible {
+                outline: 3px solid var(--yellow);
+                outline-offset: -6px;
+            }
+            .whatsapp-float {
+                position: fixed;
+                z-index: 90;
+                right: 22px;
+                bottom: 22px;
+                display: grid;
+                width: 62px;
+                height: 62px;
+                place-items: center;
+                border-radius: 50%;
+                background: #25d366;
+                color: #fff;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+                transition:
+                    transform 0.22s,
+                    box-shadow 0.22s;
+            }
+            .whatsapp-float:hover {
+                transform: translateY(-4px) scale(1.04);
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+            }
+            .whatsapp-float svg {
+                width: 34px;
+                height: 34px;
+                fill: currentColor;
+            }
+            @media (max-width: 560px) {
+                .quick-quote {
+                    min-height: 76px;
+                }
+                .whatsapp-float {
+                    right: 16px;
+                    bottom: 16px;
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+            .quick-quote {
+                width: calc(100% - 32px);
+                min-height: 54px;
+                margin: 12px auto;
+                padding: 0.75rem 1.25rem;
+                border-radius: 16px;
+                font-size: clamp(0.95rem, 1.45vw, 1.15rem);
+                box-shadow: 0 8px 22px rgba(240, 96, 56, 0.2);
+            }
+            .whatsapp-float {
+                width: 66px;
+                height: 66px;
+                border: 3px solid #fff;
+                background: #25d366;
+                box-shadow:
+                    0 10px 28px rgba(0, 0, 0, 0.25),
+                    0 0 0 1px rgba(37, 211, 102, 0.18);
+            }
+            .whatsapp-float svg {
+                width: 39px;
+                height: 39px;
+                filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+            }
+            .whatsapp-float:focus-visible {
+                outline: 3px solid var(--yellow);
+                outline-offset: 3px;
+            }
+            @media (max-width: 560px) {
+                .quick-quote {
+                    width: calc(100% - 20px);
+                    min-height: 50px;
+                    margin: 10px auto;
+                    padding: 0.65rem 1rem;
+                    border-radius: 13px;
+                }
+                .whatsapp-float {
+                    width: 58px;
+                    height: 58px;
+                    border-width: 2px;
+                }
+                .whatsapp-float svg {
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+            .whatsapp-float {
+                isolation: isolate;
+                border: 6px solid #fff;
+                background: #08b917;
+            }
+            .whatsapp-float svg {
+                display: none;
+            }
+            .whatsapp-float::before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                inset: 13px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' d='M9.5 5.6c.6-.4 1.4-.3 1.8.3l3 4.5c.4.6.3 1.3-.2 1.8l-2 1.8c1.1 2.5 3.1 4.5 5.6 5.6l1.8-2c.5-.5 1.2-.6 1.8-.2l4.5 3c.6.4.7 1.2.3 1.8l-1.4 2.1c-.7 1-1.9 1.6-3.1 1.4C13.5 24.5 7.5 18.5 6.2 10.4c-.2-1.2.4-2.4 1.4-3.1z'/%3E%3C/svg%3E")
+                    center/contain no-repeat;
+            }
+            .whatsapp-float::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: -7px;
+                bottom: -7px;
+                width: 22px;
+                height: 22px;
+                background: linear-gradient(135deg, #fff 0 48%, #08b917 49% 70%, transparent 71%);
+                transform: rotate(-12deg);
+                clip-path: polygon(0 100%, 100% 0, 100% 100%);
+            }
+            @media (max-width: 560px) {
+                .whatsapp-float {
+                    border-width: 5px;
+                }
+                .whatsapp-float::before {
+                    inset: 11px;
+                }
+                .whatsapp-float::after {
+                    left: -6px;
+                    bottom: -6px;
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+            .whatsapp-float {
+                border: 0;
+                background: transparent url("assets-analista/whatsapp-svgrepo-com.png") center/contain no-repeat;
+                box-shadow: none;
+            }
+            .whatsapp-float::before,
+            .whatsapp-float::after {
+                display: none;
+            }
+            .whatsapp-float:hover {
+                box-shadow: none;
+            }
+            .quick-quote {
+                width: fit-content;
+                max-width: calc(100% - 32px);
+                min-height: 0;
+                padding: 4px;
+                margin: 12px auto;
+                border-radius: 8px;
+            }
+            @media (max-width: 560px) {
+                .quick-quote {
+                    width: fit-content;
+                    max-width: calc(100% - 20px);
+                    min-height: 0;
+                    padding: 4px;
+                    margin: 10px auto;
+                }
+            }
+            .quick-quote {
+                width: 100%;
+                max-width: none;
+                min-height: 54px;
+                margin: 0;
+                padding: 0.75rem 1.25rem;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .whatsapp-float {
+                width: 62px;
+                height: 62px;
+                border: 0;
+                background: #25d366;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+            }
+            .whatsapp-float svg {
+                display: block;
+                width: 34px;
+                height: 34px;
+                fill: #fff;
+                filter: none;
+            }
+            .whatsapp-float::before,
+            .whatsapp-float::after {
+                display: none;
+            }
+            .whatsapp-float:hover {
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+            }
+            @media (max-width: 560px) {
+                .quick-quote {
+                    width: 100%;
+                    max-width: none;
+                    min-height: 50px;
+                    margin: 0;
+                    padding: 0.65rem 1rem;
+                    border-radius: 0;
+                }
+                .whatsapp-float {
+                    width: 56px;
+                    height: 56px;
+                }
+                .whatsapp-float svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            .whatsapp-float {
+                border: 0;
+                background: transparent url("assets-analista/whatsapp-svgrepo-com.png") center/contain no-repeat;
+                box-shadow: none;
+            }
+            .whatsapp-float svg {
+                display: none;
+            }
+            .whatsapp-float::before,
+            .whatsapp-float::after {
+                display: none;
+            }
+            .whatsapp-float:hover {
+                box-shadow: none;
+            }
+            /* Ajustes finais do carrossel para notebook, tablet e celular. */
+            .hero-media {
+                aspect-ratio: 1920/700;
+                overflow: hidden;
+            }
+            .hero-slide {
+                object-fit: contain;
+                background: var(--cream);
+            }
+            @media (min-width: 901px) and (max-width: 1440px) {
+                .hero-media {
+                    aspect-ratio: 1920/700;
+                }
+                .hero-dots {
+                    bottom: 12px;
+                }
+                .hero-intro {
+                    padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+                }
+                .hero-intro-grid {
+                    gap: clamp(2rem, 5vw, 4rem);
+                }
+                .intro-copy h1 {
+                    font-size: clamp(2.35rem, 4.2vw, 3.35rem);
+                }
+            }
+            @media (max-width: 900px) {
+                .hero-media {
+                    width: 100%;
+                    aspect-ratio: 1920/700;
+                }
+                .hero-slide {
+                    object-position: center;
+                }
+                .quick-quote {
+                    font-size: 0.95rem;
+                }
+                .contact-grid,
+                .split,
+                .process-layout {
+                    grid-template-columns: 1fr;
+                }
+                .footer-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (max-width: 560px) {
+                .site-header {
+                    position: relative;
+                }
+                .hero-media {
+                    aspect-ratio: 1920/700;
+                    min-height: 0;
+                }
+                .hero-dots {
+                    bottom: 6px;
+                    gap: 5px;
+                }
+                .hero-dot {
+                    width: 9px;
+                    height: 9px;
+                }
+                .quick-quote {
+                    font-size: 0.86rem;
+                    line-height: 1.3;
+                }
+                .hero-intro {
+                    padding: 3rem 0;
+                }
+                .hero-intro-grid {
+                    gap: 2.5rem;
+                }
+                .footer-grid {
+                    grid-template-columns: 1fr;
+                }
+                .contact {
+                    background-attachment: scroll;
+                }
+                .trust,
+                .approaches {
+                    background-attachment: scroll;
+                }
+            }
+            .form-status:not(:empty){margin-top:1rem;padding:.8rem 1rem;border-radius:9px;font-size:.88rem;font-weight:700}.form-status.is-loading{background:#fff4d6;color:#69500b}.form-status.is-success{background:#e4f5e9;color:#245b32}.form-status.is-error{background:#fde8e5;color:#8b2f25}
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="#inicio" aria-label="Therapeutica — início"
+                    ><img
+                        src="assets-analista/Logo-Horizontal.webp"
+                        alt="Therapeutica Pharmacia"
+                        width="2001"
+                        height="1001"
+                /></a>
+                <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+                    <a href="#equilibrio">Nossa essência</a><a href="#abordagens">Nossos Pilares</a
+                    ><a href="#enviar-receita">Envie sua Receita</a><a href="#unidades">Unidades</a
+                    ><a href="#duvidas">Dúvidas</a>
+                </nav>
+                <a class="button button-primary nav-cta" href="#enviar-receita"
+                    >Enviar Receita via WhatsApp <span aria-hidden="true">→</span></a
+                >
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    aria-controls="nav-links"
+                    aria-expanded="false"
+                    aria-label="Abrir menu"
+                >
+                    ☰
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="hero" id="inicio" aria-label="Linha do tempo dos 29 anos da Therapeutica">
+                <div class="container hero-grid">
+                    <div
+                        class="hero-media reveal"
+                        id="hero-carousel"
+                        aria-roledescription="carrossel"
+                        aria-label="Banners da história da Therapeutica"
+                    >
+                        <img
+                            class="hero-slide is-active"
+                            src="assets-analista/0.jpg"
+                            alt="Therapeutica Pharmacia celebra 29 anos"
+                            width="1920"
+                            height="700"
+                            fetchpriority="high"
+                        /><img
+                            class="hero-slide"
+                            src="assets-analista/1.jpg"
+                            alt="Início da matriz Therapeutica em Sorriso no ano de 1997"
+                            width="1920"
+                            height="700"
+                        /><img
+                            class="hero-slide"
+                            src="assets-analista/2.jpg"
+                            alt="Abertura da filial Therapeutica em Lucas do Rio Verde em 2004"
+                            width="1920"
+                            height="700"
+                        /><img
+                            class="hero-slide"
+                            src="assets-analista/3.jpg"
+                            alt="Abertura da filial Therapeutica em Sinop em 2009"
+                            width="1920"
+                            height="700"
+                        /><img
+                            class="hero-slide"
+                            src="assets-analista/4.jpg"
+                            alt="Abertura da filial Therapeutica na Avenida Blumenau em Sorriso em 2019"
+                            width="1920"
+                            height="700"
+                        />
+                        <div class="hero-dots" aria-label="Selecionar imagem">
+                            <button
+                                class="hero-dot is-active"
+                                type="button"
+                                aria-label="Mostrar imagem 1"
+                                aria-current="true"
+                            ></button
+                            ><button class="hero-dot" type="button" aria-label="Mostrar imagem 2"></button
+                            ><button class="hero-dot" type="button" aria-label="Mostrar imagem 3"></button
+                            ><button class="hero-dot" type="button" aria-label="Mostrar imagem 4"></button
+                            ><button class="hero-dot" type="button" aria-label="Mostrar imagem 5"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a
+                class="quick-quote"
+                href="https://wa.me/5566992113340?text=Ol%C3%A1%21%20Gostaria%20de%20enviar%20minha%20receita%20m%C3%A9dica%20e%20receber%20um%20or%C3%A7amento."
+                target="_blank"
+                rel="noopener"
+                >Envie sua receita médica e receba seu orçamento em poucos minutos no WhatsApp.</a
+            >
+            <section class="hero-intro" aria-labelledby="hero-title">
+                <div class="container hero-intro-grid">
+                    <div class="intro-copy reveal">
+                        <span class="kicker">Farmácia de manipulação em Mato Grosso</span>
+                        <h1 id="hero-title">Cuidado preciso para o que existe de mais <em>individual: você.</em></h1>
+                        <p>
+                            Há 29 anos, a Therapeutica aproxima conhecimento farmacêutico, natureza e escuta atenta para
+                            orientar cada jornada com responsabilidade.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#unidades">Falar com a farmacêutica</a
+                            ><a class="button button-secondary" href="#unidades">Ver as quatro unidades</a>
+                        </div>
+                        <small class="hero-note">Atendimento humano • orientação responsável</small>
+                    </div>
+                    <div class="intro-visual reveal">
+                        <img
+                            src="assets-analista/therapeutica-hero.webp"
+                            alt="Ambiente magistral com balança, vidrarias e ativos botânicos"
+                            width="1672"
+                            height="941"
+                        />
+                        <div class="intro-experience">
+                            <strong>29 anos</strong><span>de experiência magistral</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section trust" id="legado" aria-labelledby="trust-title">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="kicker">Legado e confiança</span>
+                        <h2 class="heading" id="trust-title">
+                            Uma história construída com constância, fórmula por fórmula.
+                        </h2>
+                        <p class="intro">Nossa fórmula secreta é o carinho, o respeito e o atendimento de qualidade.</p>
+                    </div>
+                    <div class="metrics">
+                        <article class="metric reveal"><strong>29</strong><span>anos de mercado</span></article>
+                        <article class="metric reveal">
+                            <strong>25</strong><span>anos sendo eleita a melhor farmácia da região</span>
+                        </article>
+                        <article class="metric reveal"><strong>4</strong><span>unidades em Mato Grosso</span></article>
+                    </div>
+                </div>
+            </section>
+            <section class="section balance" id="equilibrio" aria-labelledby="balance-title">
+                <div class="container split">
+                    <div class="portrait reveal">
+                        <img
+                            src="assets-analista/therapeutica-equilibrio-integral.webp"
+                            alt="Representação conceitual do equilíbrio entre ciência, natureza e vitalidade"
+                            width="1672"
+                            height="941"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="reveal">
+                        <span class="kicker">Equilíbrio Integral</span>
+                        <h2 class="heading" id="balance-title">
+                            Olhar para a pessoa por inteiro transforma a forma de cuidar.
+                        </h2>
+                        <p class="intro">
+                            Uma perspectiva consciente que combina rigor, sensibilidade e individualização, sempre em
+                            diálogo com a orientação profissional.
+                        </p>
+                        <div class="principles">
+                            <div class="principle"><b>Corpo</b><span>Respeito à singularidade.</span></div>
+                            <div class="principle"><b>Mente</b><span>Escuta que acolhe.</span></div>
+                            <div class="principle"><b>Natureza</b><span>Escolhas conscientes.</span></div>
+                            <div class="principle"><b>Ciência</b><span>Precisão responsável.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section approaches" id="abordagens" aria-labelledby="approaches-title">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="kicker">Nossos Pilares</span>
+                        <h2 class="heading" id="approaches-title">
+                            Diferentes caminhos, o mesmo compromisso com a individualidade.
+                        </h2>
+                        <p class="intro">
+                            Conheça os pilares que orientam nosso cuidado. A indicação adequada depende sempre da
+                            avaliação do profissional responsável.
+                        </p>
+                    </div>
+                    <div class="cards">
+                        <article class="card reveal">
+                            <span class="card-number">01</span>
+                            <h3>Magistral</h3>
+                            <p>Preparações individualizadas conforme prescrição e requisitos aplicáveis.</p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card-number">02</span>
+                            <h3>Homeopática</h3>
+                            <p>Processos conduzidos com critério técnico e orientação profissional.</p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card-number">03</span>
+                            <h3>Integrativa e funcional</h3>
+                            <p>Uma visão ampla que acompanha a estratégia definida pelo prescritor.</p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card-number">04</span>
+                            <h3>Estética</h3>
+                            <p>Personalização para rotinas de cuidado, respeitando necessidades específicas.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section recipe" id="enviar-receita" aria-labelledby="recipe-title">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="kicker">Envie sua receita</span>
+                        <h2 class="heading" id="recipe-title">Cotar sua fórmula pode ser simples.</h2>
+                        <p class="intro">
+                            Em três passos, você envia a prescrição, recebe o orçamento e combina a entrega com nossa
+                            equipe.
+                        </p>
+                    </div>
+                    <div class="recipe-flow">
+                        <article class="recipe-step">
+                            <strong>01</strong>
+                            <h3>Tire uma foto</h3>
+                            <p>
+                                Fotografe sua receita médica ou odontológica com boa iluminação e todas as informações
+                                visíveis.
+                            </p>
+                        </article>
+                        <article class="recipe-step">
+                            <strong>02</strong>
+                            <h3>Envie no WhatsApp</h3>
+                            <p>Clique no botão, escolha a imagem da receita e envie para nossa equipe.</p>
+                        </article>
+                        <article class="recipe-step">
+                            <strong>03</strong>
+                            <h3>Receba em casa</h3>
+                            <p>Fazemos o orçamento e combinamos a entrega com agilidade.</p>
+                        </article>
+                    </div>
+                    <div class="recipe-action">
+                        <a
+                            class="button button-primary"
+                            href="https://wa.me/556696635961?text=Ol%C3%A1%21%20Estou%20na%20Landing%20Page%20e%20gostaria%20de%20cotar%20uma%20receita%20com%20a%20equipe%20de%20Sinop."
+                            target="_blank"
+                            rel="noopener"
+                            ><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+                                <path
+                                    d="M16.1 3A12.7 12.7 0 0 0 5.2 22.2L3.5 29l7-1.8A12.8 12.8 0 1 0 16.1 3Zm0 23.2a10.4 10.4 0 0 1-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.5 10.5 0 1 1 9 4.9Zm5.8-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-2-.8-3.4-1.8-4.6-3.8-.3-.5.3-.5.8-1.6.1-.2 0-.5 0-.7l-1-2.4c-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.2 2.6 4.1 6.5 5.7.9.4 1.6.6 2.2.7.9.3 1.8.2 2.4.1.7-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4Z"
+                                /></svg
+                            >Enviar Minha Receita Agora</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <section class="section process" id="processo" aria-labelledby="process-title">
+                <div class="container process-layout">
+                    <div class="process-media reveal">
+                        <img
+                            src="assets-analista/therapeutica-processo-magistral.webp"
+                            alt="Profissional realizando pesagem conceitual de matéria-prima em laboratório magistral"
+                            width="1672"
+                            height="941"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="reveal">
+                        <span class="kicker">Processo magistral</span>
+                        <h2 class="heading" id="process-title">Da solicitação à entrega, atenção em cada detalhe.</h2>
+                        <div class="steps">
+                            <article class="step">
+                                <b>01</b>
+                                <div>
+                                    <h3>Contato e orientação</h3>
+                                    <p>
+                                        A unidade recebe a solicitação e informa o canal seguro para os documentos
+                                        necessários.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="step">
+                                <b>02</b>
+                                <div>
+                                    <h3>Análise responsável</h3>
+                                    <p>A equipe confere requisitos e esclarece condições, valores e prazo.</p>
+                                </div>
+                            </article>
+                            <article class="step">
+                                <b>03</b>
+                                <div>
+                                    <h3>Preparação criteriosa</h3>
+                                    <p>A fórmula segue o processo técnico aplicável e controles internos.</p>
+                                </div>
+                            </article>
+                            <article class="step">
+                                <b>04</b>
+                                <div>
+                                    <h3>Retirada ou entrega</h3>
+                                    <p>A modalidade disponível é confirmada diretamente com a unidade escolhida.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section quality" id="qualidade" aria-labelledby="quality-title">
+                <div class="container split">
+                    <div class="reveal">
+                        <span class="kicker">Estrutura e qualidade</span>
+                        <h2 class="heading" id="quality-title">Precisão técnica sem perder a proximidade humana.</h2>
+                        <p class="intro">
+                            O cuidado magistral pede processos consistentes, comunicação clara e responsabilidade do
+                            primeiro contato à orientação final.
+                        </p>
+                        <div class="quality-list">
+                            <div class="quality-point">
+                                <span>✓</span>
+                                <div>
+                                    <b>Critério em cada etapa</b>
+                                    <p>Conferência e preparo conduzidos conforme os requisitos aplicáveis.</p>
+                                </div>
+                            </div>
+                            <div class="quality-point">
+                                <span>✓</span>
+                                <div>
+                                    <b>Comunicação responsável</b>
+                                    <p>Informação clara, sem promessas absolutas ou alegações indevidas.</p>
+                                </div>
+                            </div>
+                            <div class="quality-point">
+                                <span>✓</span>
+                                <div>
+                                    <b>Atendimento próximo</b>
+                                    <p>Escuta e orientação para tornar o processo mais simples e seguro.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quality-photo reveal">
+                        <img
+                            src="assets-analista/therapeutica-estrutura-qualidade.webp"
+                            alt="Balança de precisão e vidrarias em ambiente laboratorial conceitual"
+                            width="1672"
+                            height="941"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="section units" id="unidades" aria-labelledby="units-title">
+                <div class="container">
+                    <div class="units-top reveal">
+                        <div>
+                            <span class="kicker">Presença local</span>
+                            <h2 class="heading" id="units-title">Quatro unidades para estar perto de você.</h2>
+                        </div>
+                        <p class="intro">
+                            Escolha a loja mais conveniente e fale diretamente com a equipe responsável pelo
+                            atendimento.
+                        </p>
+                    </div>
+                    <div class="unit-map reveal">
+                        <img
+                            src="assets-analista/therapeutica-quatro-unidades.webp"
+                            alt="Mapa conceitual ilustrando as quatro unidades Therapeutica em Mato Grosso"
+                            width="1672"
+                            height="941"
+                            loading="lazy"
+                        />
+                        <div class="unit-grid">
+                            <article class="unit-card">
+                                <span class="tag">Sinop</span>
+                                <h3>Therapeutica Sinop</h3>
+                                <p>Atendimento em Sinop, Mato Grosso.</p>
+                                <a
+                                    class="button button-secondary"
+                                    href="https://wa.me/556696635961?text=Ol%C3%A1%21%20Estou%20na%20Landing%20Page%20e%20gostaria%20de%20cotar%20uma%20receita%20com%20a%20equipe%20de%20Sinop."
+                                    target="_blank"
+                                    rel="noopener"
+                                    >WhatsApp Sinop</a
+                                >
+                            </article>
+                            <article class="unit-card">
+                                <span class="tag">Lucas do Rio Verde</span>
+                                <h3>Therapeutica Lucas</h3>
+                                <p>Atendimento em Lucas do Rio Verde, Mato Grosso.</p>
+                                <a
+                                    class="button button-secondary"
+                                    href="https://wa.me/5566992113341?text=Ol%C3%A1%21%20Estou%20na%20Landing%20Page%20e%20gostaria%20de%20cotar%20uma%20receita%20com%20a%20equipe%20de%20Lucas%20do%20Rio%20Verde."
+                                    target="_blank"
+                                    rel="noopener"
+                                    >WhatsApp Lucas</a
+                                >
+                            </article>
+                            <article class="unit-card">
+                                <span class="tag">Sorriso</span>
+                                <h3>Sorriso Matriz</h3>
+                                <p>Atendimento na unidade Matriz em Sorriso, Mato Grosso.</p>
+                                <a
+                                    class="button button-secondary"
+                                    href="https://wa.me/5566992113340?text=Ol%C3%A1%21%20Estou%20na%20Landing%20Page%20e%20gostaria%20de%20cotar%20uma%20receita%20com%20a%20equipe%20de%20Sorriso%20Matriz."
+                                    target="_blank"
+                                    rel="noopener"
+                                    >WhatsApp Matriz</a
+                                >
+                            </article>
+                            <article class="unit-card">
+                                <span class="tag">Sorriso</span>
+                                <h3>Sorriso Filial</h3>
+                                <p>Atendimento na unidade Filial em Sorriso, Mato Grosso.</p>
+                                <a
+                                    class="button button-secondary"
+                                    href="https://wa.me/556699227900?text=Ol%C3%A1%21%20Estou%20na%20Landing%20Page%20e%20gostaria%20de%20cotar%20uma%20receita%20com%20a%20equipe%20de%20Sorriso%20Filial."
+                                    target="_blank"
+                                    rel="noopener"
+                                    >WhatsApp Filial</a
+                                >
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section stories" id="experiencias" aria-labelledby="stories-title">
+                <div class="container">
+                    <div class="reveal">
+                        <span class="kicker">Experiência de quem confia</span>
+                        <h2 class="heading" id="stories-title">
+                            A confiança também nasce da forma como cada pessoa é recebida.
+                        </h2>
+                    </div>
+                    <div class="story-grid">
+                        <article class="story reveal">
+                            <span class="quote">“</span>
+                            <blockquote>Ser bem orientado torna cada etapa mais tranquila e compreensível.</blockquote>
+                            <small>Relato ilustrativo — não representa cliente real</small>
+                        </article>
+                        <article class="story reveal">
+                            <span class="quote">“</span>
+                            <blockquote>
+                                A proximidade da equipe faz diferença quando surgem dúvidas no processo.
+                            </blockquote>
+                            <small>Relato ilustrativo — não representa cliente real</small>
+                        </article>
+                        <article class="story reveal">
+                            <span class="quote">“</span>
+                            <blockquote>
+                                Ter uma unidade conveniente facilita o contato e a continuidade do cuidado.
+                            </blockquote>
+                            <small>Relato ilustrativo — não representa cliente real</small>
+                        </article>
+                    </div>
+                    <p class="disclaimer">
+                        Conteúdo ilustrativo. Substituir por depoimentos reais, verificáveis e autorizados antes da
+                        publicação.
+                    </p>
+                </div>
+            </section>
+            <section class="section faq" id="duvidas" aria-labelledby="faq-title">
+                <div class="container faq-wrap">
+                    <div class="reveal">
+                        <span class="kicker">Dúvidas frequentes</span>
+                        <h2 class="heading" id="faq-title">Informação clara antes do primeiro contato.</h2>
+                        <p class="intro">As condições finais devem ser confirmadas diretamente com a unidade.</p>
+                    </div>
+                    <div class="faq-list reveal">
+                        <details>
+                            <summary>Como solicito um orçamento?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                Escolha uma unidade e envie apenas seus dados de contato. A equipe indicará o canal
+                                apropriado para documentos e prescrições.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Preciso apresentar receita?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                Isso depende da formulação. A unidade confirmará os requisitos após conhecer sua
+                                solicitação.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Qual é o prazo de preparação?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                O prazo varia conforme a fórmula, disponibilidade e processo aplicável. Confirme antes
+                                de concluir o pedido.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Posso retirar em qualquer unidade?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                A possibilidade de retirada deve ser combinada previamente com a equipe.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>A Therapeutica realiza entregas?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                Regiões, modalidades e valores de entrega ainda precisam ser validados pelo cliente.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Como escolho a unidade?<span aria-hidden="true">+</span></summary>
+                            <p class="answer">
+                                Selecione uma das quatro opções acima; a preferência será encaminhada com sua
+                                solicitação.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <section class="section contact" id="contato" aria-labelledby="contact-title">
+                <div class="container contact-grid">
+                    <div class="reveal">
+                        <span class="kicker">Próximo passo</span>
+                        <h2 class="heading" id="contact-title">Comece com uma conversa simples e bem orientada.</h2>
+                        <p class="intro">
+                            Escolha a unidade preferida e deixe seu contato. A equipe poderá orientar o próximo passo
+                            sem coletar dados clínicos neste formulário.
+                        </p>
+                        <small class="regulatory"
+                            >Este conteúdo é institucional, não oferece diagnóstico e não substitui orientação médica ou
+                            farmacêutica.</small
+                        >
+                    </div>
+                    <form class="lead-form reveal" id="lead-form" action="enviar.php" method="post" enctype="multipart/form-data">
+                        <h3>Solicite um contato</h3>
+                        <div class="honeypot" aria-hidden="true">
+                            <label for="website">Não preencha este campo</label
+                            ><input id="website" name="website" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <div class="field">
+                            <label for="nome">Nome</label
+                            ><input id="nome" name="nome" maxlength="100" autocomplete="name" required />
+                        </div>
+                        <div class="field">
+                            <label for="telefone">Telefone ou WhatsApp</label
+                            ><input
+                                id="telefone"
+                                name="telefone"
+                                type="tel"
+                                maxlength="30"
+                                autocomplete="tel"
+                                required
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="unidade">Unidade preferida</label
+                            ><select id="unidade" name="unidade" required>
+                                <option value="">Selecione</option>
+                                <option>Sinop</option>
+                                <option>Lucas do Rio Verde</option>
+                                <option>Sorriso Matriz</option>
+                                <option>Sorriso Filial</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="email">E-mail</label
+                            ><input
+                                id="email"
+                                name="email"
+                                type="email"
+                                maxlength="150"
+                                autocomplete="email"
+                                required
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="receita">Anexar receita</label>
+                            <input
+                                id="receita"
+                                name="receita"
+                                type="file"
+                                accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                required
+                            />
+                            <small>Arquivo obrigatório em PDF ou DOCX, com no máximo 5 MB.</small>
+                        </div>
+                        <div class="field">
+                            <label for="mensagem"
+                                >Como podemos ajudar? <small>Não envie receitas ou dados de saúde.</small></label
+                            ><textarea id="mensagem" name="mensagem" maxlength="500"></textarea>
+                        </div>
+                        <label class="consent"
+                            ><input type="checkbox" name="consentimento" value="sim" required /><span
+                                >Li e concordo com a
+                                <a href="politica-de-privacidade.html">Política de Privacidade</a> e autorizo o retorno
+                                do contato.</span
+                            ></label
+                        ><button class="button button-primary" type="submit">Fazer Orçamento sem Compromisso</button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <a
+            class="whatsapp-float"
+            href="https://wa.me/5566992113340?text=Ol%C3%A1%21%20Gostaria%20de%20enviar%20minha%20receita%20m%C3%A9dica%20e%20receber%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener"
+            aria-label="Falar com a Therapeutica pelo WhatsApp"
+            ><svg viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                    d="M16.1 3A12.7 12.7 0 0 0 5.2 22.2L3.5 29l7-1.8A12.8 12.8 0 1 0 16.1 3Zm0 23.2a10.4 10.4 0 0 1-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.5 10.5 0 1 1 9 4.9Zm5.8-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-2-.8-3.4-1.8-4.6-3.8-.3-.5.3-.5.8-1.6.1-.2 0-.5 0-.7l-1-2.4c-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.2 2.6 4.1 6.5 5.7.9.4 1.6.6 2.2.7.9.3 1.8.2 2.4.1.7-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4Z"
+                /></svg
+        ></a>
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img
+                            class="footer-logo"
+                            src="assets-analista/Logo-Horizontal.webp"
+                            alt="Therapeutica Pharmacia"
+                            width="2001"
+                            height="1001"
+                        />
+                        <p>Ciência, natureza e cuidado individualizado em Mato Grosso.</p>
+                        <div class="footer-details">
+                            <p><b>Responsável técnica:</b> a confirmar</p>
+                            <p><b>Razão social:</b> a confirmar</p>
+                            <p><b>CNPJ:</b> a confirmar</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Navegação</h4>
+                        <p><a href="#equilibrio">Nossa essência</a></p>
+                        <p><a href="#processo">Processo</a></p>
+                        <p><a href="#unidades">Unidades</a></p>
+                        <h4 style="margin-top: 1.2rem">Redes sociais</h4>
+                        <div class="social-links">
+                            <span>Instagram: a confirmar</span><span>Facebook: a confirmar</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Contato e privacidade</h4>
+                        <p><b>E-mail:</b> a confirmar</p>
+                        <p><a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+                        <p><a href="#" id="cookie-settings">Preferências de cookies</a></p>
+                    </div>
+                    <div>
+                        <h4>Newsletter</h4>
+                        <p>Receba novidades e conteúdos da Therapeutica.</p>
+                        <form class="newsletter-form" id="newsletter-form" action="enviar.php" method="post">
+                            <input type="hidden" name="tipo" value="newsletter" />
+                            <div class="honeypot" aria-hidden="true">
+                                <label for="newsletter-website">Não preencha</label
+                                ><input id="newsletter-website" name="website" tabindex="-1" autocomplete="off" />
+                            </div>
+                            <div class="newsletter-row">
+                                <label class="honeypot" for="newsletter-email">Seu e-mail</label
+                                ><input
+                                    id="newsletter-email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    placeholder="Seu melhor e-mail"
+                                    required
+                                /><button type="submit">Cadastrar</button>
+                            </div>
+                            <label class="newsletter-consent"
+                                ><input type="checkbox" name="consentimento" value="sim" required /><span
+                                    >Li e concordo com a
+                                    <a href="politica-de-privacidade.html">Política de Privacidade</a>.</span
+                                ></label
+                            >
+                            <p class="newsletter-status" id="newsletter-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="legal">
+                    <p>© 2026 Therapeutica Pharmacia. Informações institucionais sujeitas à validação.</p>
+                    <p>
+                        Feito e Gerenciado por Assessoria de Marketing 360
+                        <a href="https://grupoix.com.br" target="_blank" rel="noopener">Grupo IX</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <aside
+            class="cookie-banner"
+            id="cookie-banner"
+            role="dialog"
+            aria-label="Preferências de cookies"
+            aria-live="polite"
+        >
+            <p>
+                <strong>Sua privacidade importa.</strong><br />Usamos armazenamento local para lembrar sua escolha e,
+                com seu aceite, permitir cookies de análise e marketing.
+                <a href="politica-de-privacidade.html">Leia a política</a>.
+            </p>
+            <div class="cookie-actions">
+                <button class="cookie-reject" id="reject-cookies" type="button">Recusar</button
+                ><button class="cookie-accept" id="accept-cookies" type="button">Aceitar</button>
+            </div>
+        </aside>
+        <script>
+            const carousel = document.getElementById("hero-carousel"),
+                slides = [...carousel.querySelectorAll(".hero-slide")],
+                dots = [...carousel.querySelectorAll(".hero-dot")];
+            let currentSlide = 0,
+                carouselTimer;
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+                slides.forEach((slide, i) => slide.classList.toggle("is-active", i === currentSlide));
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("is-active", i === currentSlide);
+                    if (i === currentSlide) dot.setAttribute("aria-current", "true");
+                    else dot.removeAttribute("aria-current");
+                });
+            }
+            function startCarousel() {
+                if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+                clearInterval(carouselTimer);
+                carouselTimer = setInterval(() => showSlide(currentSlide + 1), 6000);
+            }
+            dots.forEach((dot, index) =>
+                dot.addEventListener("click", () => {
+                    showSlide(index);
+                    startCarousel();
+                })
+            );
+            carousel.addEventListener("mouseenter", () => clearInterval(carouselTimer));
+            carousel.addEventListener("mouseleave", startCarousel);
+            carousel.addEventListener("focusin", () => clearInterval(carouselTimer));
+            carousel.addEventListener("focusout", startCarousel);
+            startCarousel();
+            const menuButton = document.getElementById("menu-toggle"),
+                navLinks = document.getElementById("nav-links");
+            menuButton.addEventListener("click", () => {
+                const open = navLinks.classList.toggle("is-open");
+                menuButton.setAttribute("aria-expanded", String(open));
+                menuButton.textContent = open ? "×" : "☰";
+            });
+            navLinks.querySelectorAll("a").forEach((link) =>
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("is-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.textContent = "☰";
+                })
+            );
+            const revealItems = document.querySelectorAll(".reveal");
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver(
+                    (entries) =>
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        }),
+                    { threshold: 0.1 }
+                );
+                revealItems.forEach((item) => observer.observe(item));
+            } else {
+                revealItems.forEach((item) => item.classList.add("is-visible"));
+            }
+            document.querySelectorAll(".choose-unit").forEach((link) =>
+                link.addEventListener("click", () => {
+                    document.getElementById("unidade").value = link.dataset.unit;
+                })
+            );
+            const cookieBanner = document.getElementById("cookie-banner"),
+                consentKey = "therapeutica-cookie-consent";
+            function saveConsent(value) {
+                localStorage.setItem(consentKey, value);
+                document.documentElement.dataset.cookieConsent = value;
+                cookieBanner.classList.remove("is-open");
+            }
+            const savedConsent = localStorage.getItem(consentKey);
+            if (savedConsent) {
+                document.documentElement.dataset.cookieConsent = savedConsent;
+            } else {
+                cookieBanner.classList.add("is-open");
+            }
+            document.getElementById("accept-cookies").addEventListener("click", () => saveConsent("accepted"));
+            document.getElementById("reject-cookies").addEventListener("click", () => saveConsent("rejected"));
+            document.getElementById("cookie-settings").addEventListener("click", (event) => {
+                event.preventDefault();
+                cookieBanner.classList.add("is-open");
+            });
+            document.getElementById("lead-form").addEventListener("submit", async (event) => {
+                event.preventDefault();
+                const form = event.currentTarget,
+                    status = document.getElementById("form-status");
+                status.className = "form-status is-loading";
+                status.textContent = "Enviando…";
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: { Accept: "application/json" },
+                    });
+                    const raw = await response.text();
+                    let data;
+                    try {
+                        data = JSON.parse(raw);
+                    } catch (parseError) {
+                        throw new Error("O servidor não executou o PHP corretamente. Verifique o log de erros do cPanel.");
+                    }
+                    if (!response.ok) throw new Error(data.message || "Falha no envio");
+                    status.className = "form-status is-success";
+                    status.textContent = data.message;
+                    form.reset();
+                } catch (error) {
+                    status.className = "form-status is-error";
+                    status.textContent = error.message || "Não foi possível enviar agora.";
+                }
+            });
+            document.getElementById("receita").addEventListener("change", (event) => {
+                const input = event.currentTarget;
+                const file = input.files[0];
+                input.setCustomValidity(
+                    file && file.size > 5 * 1024 * 1024
+                        ? "O anexo deve ter no máximo 5 MB."
+                        : ""
+                );
+                input.reportValidity();
+            });
+            document.getElementById("newsletter-form").addEventListener("submit", async (event) => {
+                event.preventDefault();
+                const form = event.currentTarget,
+                    status = document.getElementById("newsletter-status");
+                status.textContent = "Cadastrando…";
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: { Accept: "application/json" },
+                    });
+                    const data = await response.json();
+                    if (!response.ok) throw new Error(data.message || "Falha no cadastro");
+                    status.textContent = data.message;
+                    form.reset();
+                } catch (error) {
+                    status.textContent = "Não foi possível cadastrar agora. Tente novamente mais tarde.";
+                }
+            });
+        </script>
+        <script>
+            document.querySelector(".footer-details").innerHTML =
+                "<p><b>Responsável técnica:</b> Andrea Andreolla Borges — CRF 1088/97</p><p><b>Razão social:</b> THERAPEUTICA FARMÁCIA E MANIPULAÇÃO DE FÓRMULAS LTDA</p><p><b>CNPJ:</b> 01.780.384/0001-75</p>";
+            document.querySelector(".social-links").innerHTML =
+                '<a href="https://www.instagram.com/therapeuticamt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Therapeutica">Instagram</a><a href="https://www.facebook.com/therapeuticapharmaciasorriso/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Therapeutica">Facebook</a>';
+            startCarousel = function () {
+                clearInterval(carouselTimer);
+                carouselTimer = setInterval(() => showSlide(currentSlide + 1), 4000);
+            };
+            startCarousel();
+            const leadForm = document.getElementById("lead-form");
+            const formTitle = leadForm.querySelector("h3");
+            formTitle.textContent = "Envie sua receita";
+            leadForm.querySelector('label[for="mensagem"] small').textContent =
+                "Não inclua dados pessoais sensíveis neste campo.";
+            leadForm.querySelector('button[type="submit"]').textContent = "Enviar Receita";
+        </script>
+    </body>
+</html>
